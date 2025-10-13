@@ -1,1 +1,71 @@
+title: Raunit Kohli
+description: Machine Learning Software Engineer and Researcher specializing in Reinforcement Learning, Computer Vision, and AI applications. Experienced in robotics, data science, and innovative ML solutions.
+url: https://kohlir2020.github.io
+baseurl: ""
 theme: jekyll-theme-cayman
+
+# SEO and social configuration
+author:
+  name: Raunit Kohli
+  email: your.email@example.com
+  twitter: yourtwitter
+  picture: /assets/img/profile.jpg
+
+# Site settings for SEO
+lang: en_US
+timezone: America/Los_Angeles
+logo: /assets/img/logo.png
+image: /assets/img/site-image.jpg
+
+# SEO plugin configuration
+twitter:
+  username: yourtwitter
+  card: summary_large_image
+
+facebook:
+  app_id: 
+  publisher: 
+  admins: 
+
+social:
+  name: Raunit Kohli
+  links:
+    - https://twitter.com/yourtwitter
+    - https://www.linkedin.com/in/yourprofile
+    - https://github.com/kohlir2020
+
+# Google Analytics (optional)
+google_analytics: 
+
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+  - jekyll-feed
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:name/
+  publications:
+    output: true
+    permalink: /:collection/:name/
+
+# Contact information
+email: your.email@example.com
+github_username: kohlir2020
+linkedin_username: yourprofile
+twitter_username: yourtwitter
+github_url: https://github.com/kohlir2020
+linkedin_url: https://linkedin.com/in/yourprofile
+
+defaults:
+  - scope:
+      path: ""
+      type: "projects"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "publications"
+    values:
+      layout: "publication"

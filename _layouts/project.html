@@ -1,0 +1,184 @@
+---
+layout: default
+---
+
+<article class="project-page" role="main">
+  <header class="project-header">
+    <div class="project-meta">
+      <h1 class="project-title">{{ page.title }}</h1>
+      
+      {% if page.subtitle %}
+        <p class="project-subtitle">{{ page.subtitle }}</p>
+      {% endif %}
+      
+      <div class="project-year-role">
+        {% if page.year %}
+          <span class="project-year" aria-label="Project year">{{ page.year }}</span>
+        {% endif %}
+        
+        {% if page.role %}
+          <span class="project-role" aria-label="Your role">{{ page.role }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    {% if page.featured_image %}
+      <div class="project-image">
+        <img src="{{ page.featured_image | relative_url }}" 
+             alt="Featured image for {{ page.title }}" 
+             class="project-featured-img">
+      </div>
+    {% endif %}
+  </header>
+
+  <div class="project-content">
+    <aside class="project-sidebar">
+      <div class="project-metadata">
+        <h2 class="metadata-title">Project Details</h2>
+        
+        {% if page.tech and page.tech.size > 0 %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Technologies</h3>
+            <div class="tech-stack" role="list" aria-label="Technologies used">
+              {% for tech in page.tech %}
+                <span class="tech-item" role="listitem">{{ tech }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if page.tags and page.tags.size > 0 %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Tags</h3>
+            <div class="tag-list" role="list" aria-label="Project tags">
+              {% for tag in page.tags %}
+                <span class="tag-item" role="listitem">{{ tag }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if page.highlights and page.highlights.size > 0 %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Key Highlights</h3>
+            <ul class="highlight-list" aria-label="Project highlights">
+              {% for highlight in page.highlights %}
+                <li class="highlight-item">{{ highlight }}</li>
+              {% endfor %}
+            </ul>
+          </div>
+        {% endif %}
+
+        {% if page.links %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Links</h3>
+            <div class="project-links" role="list" aria-label="Project links">
+              {% if page.links.repo and page.links.repo != "" %}
+                <a href="{{ page.links.repo }}" 
+                   class="project-link project-link--repo" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="View repository">
+                  <span class="link-icon" aria-hidden="true">📁</span>
+                  <span class="link-text">Repository</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if page.links.paper and page.links.paper != "" %}
+                <a href="{{ page.links.paper }}" 
+                   class="project-link project-link--paper" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="View paper">
+                  <span class="link-icon" aria-hidden="true">📄</span>
+                  <span class="link-text">Paper</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if page.links.demo and page.links.demo != "" %}
+                <a href="{{ page.links.demo }}" 
+                   class="project-link project-link--demo" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="View demo">
+                  <span class="link-icon" aria-hidden="true">🚀</span>
+                  <span class="link-text">Live Demo</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% if page.status %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Status</h3>
+            <span class="status-badge status--{{ page.status | downcase }}"
+                  aria-label="Project status: {{ page.status }}">
+              {{ page.status }}
+            </span>
+          </div>
+        {% endif %}
+      </div>
+    </aside>
+
+    <main class="project-main">
+      {% if page.summary %}
+        <div class="project-summary-section">
+          <h2 class="sr-only">Project Summary</h2>
+          <p class="project-summary-text">{{ page.summary }}</p>
+        </div>
+      {% endif %}
+
+      <div class="project-body">
+        {{ content }}
+      </div>
+    </main>
+  </div>
+
+  <footer class="project-footer">
+    <div class="project-navigation">
+      <a href="{{ '/projects/' | relative_url }}" class="back-to-projects">
+        <span aria-hidden="true">←</span> Back to Projects
+      </a>
+      
+      {% comment %} Next/Previous project navigation {% endcomment %}
+      {% assign projects = site.projects | sort: 'date' | reverse %}
+      {% assign current_index = nil %}
+      {% for project in projects %}
+        {% if project.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if current_index %}
+        <div class="project-nav-links">
+          {% assign prev_index = current_index | plus: 1 %}
+          {% assign next_index = current_index | minus: 1 %}
+          
+          {% if next_index >= 0 %}
+            {% assign next_project = projects[next_index] %}
+            <a href="{{ next_project.url | relative_url }}" class="nav-link nav-link--next">
+              <span class="nav-direction">Next</span>
+              <span class="nav-title">{{ next_project.title }}</span>
+            </a>
+          {% endif %}
+          
+          {% if prev_index < projects.size %}
+            {% assign prev_project = projects[prev_index] %}
+            <a href="{{ prev_project.url | relative_url }}" class="nav-link nav-link--prev">
+              <span class="nav-direction">Previous</span>
+              <span class="nav-title">{{ prev_project.title }}</span>
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </footer>
+</article>

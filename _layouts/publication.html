@@ -1,0 +1,293 @@
+---
+layout: default
+---
+
+<article class="publication-page" role="main">
+  <header class="publication-header">
+    <div class="publication-meta">
+      <h1 class="publication-title">{{ page.title }}</h1>
+      
+      <div class="publication-details">
+        {% if page.authors and page.authors.size > 0 %}
+          <div class="publication-authors">
+            <span class="authors-label">Authors:</span>
+            <span class="authors-list">
+              {% if page.authors.size > 1 %}
+                {{ page.authors | join: ", " }}
+              {% else %}
+                {{ page.authors | first }}
+              {% endif %}
+            </span>
+          </div>
+        {% endif %}
+
+        <div class="publication-venue-year">
+          {% if page.venue %}
+            <span class="publication-venue">{{ page.venue }}</span>
+          {% endif %}
+          
+          {% if page.year %}
+            <span class="publication-year" aria-label="Publication year">{{ page.year }}</span>
+          {% elsif page.date %}
+            <span class="publication-year" aria-label="Publication year">{{ page.date | date: "%Y" }}</span>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% comment %} Publication identifiers and badges {% endcomment %}
+    <div class="publication-badges-section">
+      {% if page.doi or page.arxiv or page.pmid %}
+        <div class="pub-badges" role="group" aria-label="Publication identifiers">
+          {% if page.doi and page.doi != "" %}
+            <a href="https://doi.org/{{ page.doi }}" 
+               class="pub-badge pub-badge--doi" 
+               target="_blank" 
+               rel="noopener"
+               aria-label="DOI link">
+              <span class="badge-label">DOI</span>
+              <span class="badge-value">{{ page.doi }}</span>
+            </a>
+          {% endif %}
+
+          {% if page.arxiv and page.arxiv != "" %}
+            <a href="https://arxiv.org/abs/{{ page.arxiv }}" 
+               class="pub-badge pub-badge--arxiv" 
+               target="_blank" 
+               rel="noopener"
+               aria-label="arXiv link">
+              <span class="badge-label">arXiv</span>
+              <span class="badge-value">{{ page.arxiv }}</span>
+            </a>
+          {% endif %}
+
+          {% if page.pmid and page.pmid != "" %}
+            <a href="https://pubmed.ncbi.nlm.nih.gov/{{ page.pmid }}" 
+               class="pub-badge pub-badge--pmid" 
+               target="_blank" 
+               rel="noopener"
+               aria-label="PubMed link">
+              <span class="badge-label">PMID</span>
+              <span class="badge-value">{{ page.pmid }}</span>
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </header>
+
+  <div class="publication-content">
+    <aside class="publication-sidebar">
+      <div class="publication-metadata">
+        <h2 class="metadata-title">Publication Details</h2>
+        
+        {% comment %} Citation information {% endcomment %}
+        <div class="metadata-section">
+          <h3 class="metadata-label">Citation</h3>
+          <div class="formal-citation">
+            {% if page.authors %}
+              {% if page.authors.size > 1 %}
+                {% assign authors_list = page.authors | join: ", " %}
+              {% else %}
+                {% assign authors_list = page.authors | first %}
+              {% endif %}
+              <span class="cite-authors">{{ authors_list }}</span>. 
+            {% endif %}
+            <span class="cite-title">"{{ page.title }}."</span>
+            {% if page.venue %}
+              <em class="cite-venue">{{ page.venue }}</em>{% if page.volume %}, vol. {{ page.volume }}{% endif %}{% if page.issue %}, no. {{ page.issue }}{% endif %}{% if page.pages %}, pp. {{ page.pages }}{% endif %}, 
+            {% endif %}
+            {% if page.year %}{{ page.year }}{% elsif page.date %}{{ page.date | date: "%Y" }}{% endif %}.
+          </div>
+        </div>
+
+        {% comment %} BibTeX Citation {% endcomment %}
+        <div class="metadata-section">
+          <details class="bibtex-section">
+            <summary class="bibtex-toggle" aria-label="Show BibTeX citation">
+              <span class="bibtex-icon" aria-hidden="true">📋</span>
+              BibTeX Citation
+            </summary>
+            <div class="bibtex-content">
+              <pre class="bibtex-code" aria-label="BibTeX citation"><code>@article{{% if page.authors %}{{ page.authors[0] | split: " " | last | downcase }}{% endif %}{{ page.year | default: "2024" }},
+  title = {{ "{" }}{{ page.title }}{{ "}" }},
+  {% if page.authors %}author = {{ "{" }}{{ page.authors | join: " and " }}{{ "}" }},{% endif %}
+  {% if page.venue %}journal = {{ "{" }}{{ page.venue }}{{ "}" }},{% endif %}
+  {% if page.year %}year = {{ "{" }}{{ page.year }}{{ "}" }},{% endif %}
+  {% if page.volume %}volume = {{ "{" }}{{ page.volume }}{{ "}" }},{% endif %}
+  {% if page.issue %}number = {{ "{" }}{{ page.issue }}{{ "}" }},{% endif %}
+  {% if page.pages %}pages = {{ "{" }}{{ page.pages }}{{ "}" }},{% endif %}
+  {% if page.doi %}doi = {{ "{" }}{{ page.doi }}{{ "}" }},{% endif %}
+  {% if page.url %}url = {{ "{" }}{{ page.url }}{{ "}" }}{% endif %}
+}</code></pre>
+              <button class="copy-bibtex" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy BibTeX to clipboard">
+                Copy to Clipboard
+              </button>
+            </div>
+          </details>
+        </div>
+
+        {% if page.keywords and page.keywords.size > 0 %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Keywords</h3>
+            <div class="keyword-list" role="list" aria-label="Publication keywords">
+              {% for keyword in page.keywords %}
+                <span class="keyword-item" role="listitem">{{ keyword }}</span>
+              {% endfor %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% comment %} Additional links {% endcomment %}
+        {% if page.pdf_url or page.code_url or page.dataset_url or page.slides_url or page.video_url %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Resources</h3>
+            <div class="resource-links" role="list" aria-label="Publication resources">
+              {% if page.pdf_url and page.pdf_url != "" %}
+                <a href="{{ page.pdf_url }}" 
+                   class="resource-link resource-link--pdf" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="Download PDF">
+                  <span class="link-icon" aria-hidden="true">📄</span>
+                  <span class="link-text">PDF</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if page.code_url and page.code_url != "" %}
+                <a href="{{ page.code_url }}" 
+                   class="resource-link resource-link--code" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="View source code">
+                  <span class="link-icon" aria-hidden="true">💻</span>
+                  <span class="link-text">Code</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if page.dataset_url and page.dataset_url != "" %}
+                <a href="{{ page.dataset_url }}" 
+                   class="resource-link resource-link--dataset" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="Access dataset">
+                  <span class="link-icon" aria-hidden="true">📊</span>
+                  <span class="link-text">Dataset</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if page.slides_url and page.slides_url != "" %}
+                <a href="{{ page.slides_url }}" 
+                   class="resource-link resource-link--slides" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="View presentation slides">
+                  <span class="link-icon" aria-hidden="true">🎯</span>
+                  <span class="link-text">Slides</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+
+              {% if page.video_url and page.video_url != "" %}
+                <a href="{{ page.video_url }}" 
+                   class="resource-link resource-link--video" 
+                   target="_blank" 
+                   rel="noopener"
+                   role="listitem"
+                   aria-label="Watch video presentation">
+                  <span class="link-icon" aria-hidden="true">🎥</span>
+                  <span class="link-text">Video</span>
+                  <span class="link-external" aria-hidden="true">↗</span>
+                </a>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+
+        {% comment %} Publication metrics {% endcomment %}
+        {% if page.citations or page.impact_factor %}
+          <div class="metadata-section">
+            <h3 class="metadata-label">Metrics</h3>
+            <div class="publication-metrics" role="group" aria-label="Publication metrics">
+              {% if page.citations %}
+                <div class="metric-item" aria-label="{{ page.citations }} citations">
+                  <span class="metric-value">{{ page.citations }}</span>
+                  <span class="metric-label">Citations</span>
+                </div>
+              {% endif %}
+              {% if page.impact_factor %}
+                <div class="metric-item" aria-label="Impact factor {{ page.impact_factor }}">
+                  <span class="metric-label">Impact Factor</span>
+                  <span class="metric-value">{{ page.impact_factor }}</span>
+                </div>
+              {% endif %}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+    </aside>
+
+    <main class="publication-main">
+      {% if page.abstract %}
+        <section class="publication-abstract">
+          <h2 class="abstract-title">Abstract</h2>
+          <div class="abstract-content">
+            {{ page.abstract }}
+          </div>
+        </section>
+      {% endif %}
+
+      <div class="publication-body">
+        {{ content }}
+      </div>
+    </main>
+  </div>
+
+  <footer class="publication-footer">
+    <div class="publication-navigation">
+      <a href="{{ '/publications/' | relative_url }}" class="back-to-publications">
+        <span aria-hidden="true">←</span> Back to Publications
+      </a>
+      
+      {% comment %} Next/Previous publication navigation {% endcomment %}
+      {% assign publications = site.publications | sort: 'date' | reverse %}
+      {% assign current_index = nil %}
+      {% for publication in publications %}
+        {% if publication.url == page.url %}
+          {% assign current_index = forloop.index0 %}
+          {% break %}
+        {% endif %}
+      {% endfor %}
+      
+      {% if current_index %}
+        <div class="publication-nav-links">
+          {% assign prev_index = current_index | plus: 1 %}
+          {% assign next_index = current_index | minus: 1 %}
+          
+          {% if next_index >= 0 %}
+            {% assign next_publication = publications[next_index] %}
+            <a href="{{ next_publication.url | relative_url }}" class="nav-link nav-link--next">
+              <span class="nav-direction">Next</span>
+              <span class="nav-title">{{ next_publication.title }}</span>
+            </a>
+          {% endif %}
+          
+          {% if prev_index < publications.size %}
+            {% assign prev_publication = publications[prev_index] %}
+            <a href="{{ prev_publication.url | relative_url }}" class="nav-link nav-link--prev">
+              <span class="nav-direction">Previous</span>
+              <span class="nav-title">{{ prev_publication.title }}</span>
+            </a>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+  </footer>
+</article>

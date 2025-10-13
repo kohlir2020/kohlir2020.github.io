@@ -1,0 +1,131 @@
+{% comment %}
+  Publication item template for displaying publications in IEEE-like citation format
+  Usage: {% include publication_item.html publication=publication_object featured=true/false %}
+{% endcomment %}
+
+{% assign item_class = "publication-item" %}
+{% if include.featured %}
+  {% assign item_class = item_class | append: " publication-item--featured" %}
+{% endif %}
+
+<article class="{{ item_class }}" role="article">
+  <div class="publication-citation">
+    {% comment %} IEEE-style citation {% endcomment %}
+    {% if include.publication.authors %}
+      {% if include.publication.authors.size > 1 %}
+        {% assign authors_list = include.publication.authors | join: ", " %}
+      {% else %}
+        {% assign authors_list = include.publication.authors | first %}
+      {% endif %}
+      <span class="citation-authors">{{ authors_list }}</span>, 
+    {% endif %}
+
+    {% comment %} Title with link {% endcomment %}
+    <span class="citation-title">
+      {% if include.publication.url and include.publication.url != "" %}
+        "<a href="{{ include.publication.url | relative_url }}" class="citation-link">{{ include.publication.title }}</a>," 
+      {% else %}
+        "{{ include.publication.title }},"
+      {% endif %}
+    </span>
+
+    {% comment %} Venue and publication details {% endcomment %}
+    {% if include.publication.venue %}
+      <em class="citation-venue">{{ include.publication.venue }}</em>{% if include.publication.volume %}, vol. {{ include.publication.volume }}{% endif %}{% if include.publication.issue %}, no. {{ include.publication.issue }}{% endif %}{% if include.publication.pages %}, pp. {{ include.publication.pages }}{% endif %}, 
+    {% endif %}
+
+    {% comment %} Publication year {% endcomment %}
+    {% if include.publication.year %}
+      <span class="citation-year">{{ include.publication.year }}</span>.
+    {% elsif include.publication.date %}
+      <span class="citation-year">{{ include.publication.date | date: "%Y" }}</span>.
+    {% endif %}
+  </div>
+
+  {% comment %} DOI and arXiv badges {% endcomment %}
+  <div class="publication-badges" role="group" aria-label="Publication identifiers">
+    {% if include.publication.doi and include.publication.doi != "" %}
+      <a href="https://doi.org/{{ include.publication.doi }}" 
+         class="pub-badge pub-badge--doi" 
+         target="_blank" 
+         rel="noopener"
+         aria-label="DOI link for this publication">
+        <span class="badge-label">DOI</span>
+        <span class="badge-value">{{ include.publication.doi }}</span>
+      </a>
+    {% endif %}
+
+    {% if include.publication.arxiv and include.publication.arxiv != "" %}
+      <a href="https://arxiv.org/abs/{{ include.publication.arxiv }}" 
+         class="pub-badge pub-badge--arxiv" 
+         target="_blank" 
+         rel="noopener"
+         aria-label="arXiv link for this publication">
+        <span class="badge-label">arXiv</span>
+        <span class="badge-value">{{ include.publication.arxiv }}</span>
+      </a>
+    {% endif %}
+
+    {% if include.publication.pmid and include.publication.pmid != "" %}
+      <a href="https://pubmed.ncbi.nlm.nih.gov/{{ include.publication.pmid }}" 
+         class="pub-badge pub-badge--pmid" 
+         target="_blank" 
+         rel="noopener"
+         aria-label="PubMed link for this publication">
+        <span class="badge-label">PMID</span>
+        <span class="badge-value">{{ include.publication.pmid }}</span>
+      </a>
+    {% endif %}
+  </div>
+
+  {% comment %} BibTeX citation disclosure {% endcomment %}
+  <div class="publication-actions">
+    <details class="bibtex-disclosure">
+      <summary class="bibtex-toggle" aria-label="Show BibTeX citation">
+        <span class="bibtex-icon" aria-hidden="true">📋</span>
+        Cite BibTeX
+      </summary>
+      <div class="bibtex-content">
+        <pre class="bibtex-code" aria-label="BibTeX citation"><code>@article{{% if include.publication.authors %}{{ include.publication.authors[0] | split: " " | last | downcase }}{% endif %}{{ include.publication.year | default: "2024" }},
+  title = {{ "{" }}{{ include.publication.title }}{{ "}" }},
+  {% if include.publication.authors %}author = {{ "{" }}{{ include.publication.authors | join: " and " }}{{ "}" }},{% endif %}
+  {% if include.publication.venue %}journal = {{ "{" }}{{ include.publication.venue }}{{ "}" }},{% endif %}
+  {% if include.publication.year %}year = {{ "{" }}{{ include.publication.year }}{{ "}" }},{% endif %}
+  {% if include.publication.volume %}volume = {{ "{" }}{{ include.publication.volume }}{{ "}" }},{% endif %}
+  {% if include.publication.issue %}number = {{ "{" }}{{ include.publication.issue }}{{ "}" }},{% endif %}
+  {% if include.publication.pages %}pages = {{ "{" }}{{ include.publication.pages }}{{ "}" }},{% endif %}
+  {% if include.publication.doi %}doi = {{ "{" }}{{ include.publication.doi }}{{ "}" }},{% endif %}
+  {% if include.publication.url %}url = {{ "{" }}{{ include.publication.url }}{{ "}" }}{% endif %}
+}</code></pre>
+        <button class="copy-bibtex" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy BibTeX to clipboard">
+          Copy
+        </button>
+      </div>
+    </details>
+  </div>
+
+  {% comment %} Abstract preview for featured items {% endcomment %}
+  {% if include.featured and include.publication.abstract %}
+    <div class="publication-abstract">
+      <p><strong>Abstract:</strong> {{ include.publication.abstract | truncatewords: 30 }}</p>
+    </div>
+  {% endif %}
+
+  {% comment %} Publication metrics if available {% endcomment %}
+  {% if include.publication.citations or include.publication.impact_factor %}
+    <div class="publication-metrics" role="group" aria-label="Publication metrics">
+      {% if include.publication.citations %}
+        <span class="pub-metric" aria-label="{{ include.publication.citations }} citations">
+          <span class="metric-value">{{ include.publication.citations }}</span>
+          <span class="metric-label">citations</span>
+        </span>
+      {% endif %}
+      {% if include.publication.impact_factor %}
+        <span class="pub-metric" aria-label="Impact factor {{ include.publication.impact_factor }}">
+          <span class="metric-label">IF:</span>
+          <span class="metric-value">{{ include.publication.impact_factor }}</span>
+        </span>
+      {% endif %}
+    </div>
+  {% endif %}
+</article>

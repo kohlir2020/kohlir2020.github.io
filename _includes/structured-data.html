@@ -1,0 +1,93 @@
+{% comment %}
+  Structured Data (JSON-LD) for better SEO
+  Include this in the head section for rich snippets
+{% endcomment %}
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "{{ site.author.name | default: site.title }}",
+  "url": "{{ site.url }}",
+  "image": "{{ site.author.picture | absolute_url }}",
+  "sameAs": [
+    {% for link in site.social.links %}
+      "{{ link }}"{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "jobTitle": "Machine Learning Software Engineer",
+  "worksFor": {
+    "@type": "Organization",
+    "name": "Rocket Software"
+  },
+  "alumniOf": {
+    "@type": "Organization",
+    "name": "University of California, San Diego"
+  },
+  "knowsAbout": [
+    "Machine Learning",
+    "Reinforcement Learning", 
+    "Computer Vision",
+    "Artificial Intelligence",
+    "Robotics",
+    "Data Science",
+    "Python",
+    "PyTorch"
+  ],
+  "email": "{{ site.email }}",
+  "description": "{{ site.description }}"
+}
+</script>
+
+{% if page.layout == 'project' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "CreativeWork",
+  "name": "{{ page.title }}",
+  "description": "{{ page.summary | default: page.description }}",
+  "author": {
+    "@type": "Person",
+    "name": "{{ site.author.name }}"
+  },
+  "dateCreated": "{{ page.year }}-01-01",
+  "url": "{{ page.url | absolute_url }}",
+  {% if page.links.repo %}
+  "codeRepository": "{{ page.links.repo }}",
+  {% endif %}
+  "programmingLanguage": {{ page.tech | jsonify }},
+  "keywords": {{ page.tags | jsonify }}
+}
+</script>
+{% endif %}
+
+{% if page.layout == 'publication' %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "{{ page.title }}",
+  "abstract": "{{ page.abstract }}",
+  "author": [
+    {% for author in page.authors %}
+    {
+      "@type": "Person",
+      "name": "{{ author }}"
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ],
+  "datePublished": "{{ page.year }}-01-01",
+  "publisher": {
+    "@type": "Organization", 
+    "name": "{{ page.venue }}"
+  },
+  {% if page.doi %}
+  "doi": "{{ page.doi }}",
+  "url": "https://doi.org/{{ page.doi }}",
+  {% else %}
+  "url": "{{ page.url | absolute_url }}",
+  {% endif %}
+  "keywords": {{ page.keywords | jsonify }}
+}
+</script>
+{% endif %}
