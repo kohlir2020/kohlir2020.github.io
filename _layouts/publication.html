@@ -109,16 +109,16 @@ layout: default
               BibTeX Citation
             </summary>
             <div class="bibtex-content">
-              <pre class="bibtex-code" aria-label="BibTeX citation"><code>@article{{% if page.authors %}{{ page.authors[0] | split: " " | last | downcase }}{% endif %}{{ page.year | default: "2024" }},
-  title = {{ "{" }}{{ page.title }}{{ "}" }},
-  {% if page.authors %}author = {{ "{" }}{{ page.authors | join: " and " }}{{ "}" }},{% endif %}
-  {% if page.venue %}journal = {{ "{" }}{{ page.venue }}{{ "}" }},{% endif %}
-  {% if page.year %}year = {{ "{" }}{{ page.year }}{{ "}" }},{% endif %}
-  {% if page.volume %}volume = {{ "{" }}{{ page.volume }}{{ "}" }},{% endif %}
-  {% if page.issue %}number = {{ "{" }}{{ page.issue }}{{ "}" }},{% endif %}
-  {% if page.pages %}pages = {{ "{" }}{{ page.pages }}{{ "}" }},{% endif %}
-  {% if page.doi %}doi = {{ "{" }}{{ page.doi }}{{ "}" }},{% endif %}
-  {% if page.url %}url = {{ "{" }}{{ page.url }}{{ "}" }}{% endif %}
+              <pre class="bibtex-code" aria-label="BibTeX citation"><code>@article{% raw %}{{% endraw %}{% if page.authors %}{{ page.authors[0] | split: " " | last | downcase }}{% endif %}{{ page.year | default: "2024" }}{% raw %},{% endraw %}
+  title = {% raw %}{{% endraw %}{{ page.title }}{% raw %}}{% endraw %},
+  {% if page.authors %}author = {% raw %}{{% endraw %}{{ page.authors | join: " and " }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.venue %}journal = {% raw %}{{% endraw %}{{ page.venue }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.year %}year = {% raw %}{{% endraw %}{{ page.year }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.volume %}volume = {% raw %}{{% endraw %}{{ page.volume }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.issue %}number = {% raw %}{{% endraw %}{{ page.issue }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.pages %}pages = {% raw %}{{% endraw %}{{ page.pages }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.doi %}doi = {% raw %}{{% endraw %}{{ page.doi }}{% raw %}}{% endraw %},{% endif %}
+  {% if page.url %}url = {% raw %}{{% endraw %}{{ page.url }}{% raw %}}{% endraw %}{% endif %}
 }</code></pre>
               <button class="copy-bibtex" onclick="navigator.clipboard.writeText(this.previousElementSibling.textContent)" aria-label="Copy BibTeX to clipboard">
                 Copy to Clipboard
