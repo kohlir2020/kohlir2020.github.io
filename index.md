@@ -50,7 +50,7 @@ image: /assets/img/site-image.jpg
 <div class="featured-publications-grid">
   {% for pub in featured_publications %}
   <div class="featured-publication-card">
-    <h3><a href="{{ pub.url | relative_url }}">{{ pub.title }}</a></h3>
+    <h3><a href="{{ pub.url }}">{{ pub.title }}</a></h3>
     <p class="publication-meta">
       {% for author in pub.authors %}
         {% if author == "Raunit Kohli" %}<strong>{{ author }}</strong>{% else %}{{ author }}{% endif %}{% unless forloop.last %}, {% endunless %}
@@ -65,7 +65,7 @@ image: /assets/img/site-image.jpg
       {% if pub.doi and pub.doi != "" %}
         <a href="https://doi.org/{{ pub.doi }}" target="_blank" rel="noopener" class="pub-link">DOI</a>
       {% endif %}
-      <a href="{{ pub.url | relative_url }}" class="pub-link">Details</a>
+      <a href="{{ pub.url }}" class="pub-link">Details</a>
     </div>
   </div>
   {% endfor %}
