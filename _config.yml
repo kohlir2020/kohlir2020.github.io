@@ -2,10 +2,11 @@ title: "Raunit Kohli - ML Engineer & Researcher"
 description: "Machine Learning Engineer at Rocket Software and UCSD Research Staff specializing in LLM systems, reinforcement learning, and robotic AI. Published researcher with expertise in citation generation, animal-robot interaction, and production ML pipelines."
 url: "https://kohlir2020.github.io"     # change after you set a custom domain
 baseurl: ""                              # user site => empty
-theme: minima
+remote_theme: pages-themes/minimal
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-remote-theme
 
 # SEO and social media defaults
 # twitter:
