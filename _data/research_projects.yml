@@ -1,19 +1,19 @@
 - title: "Pirat Home-Base Behavior (rat–robot interaction)"
   summary: "Differential-drive robot + real rats in circular arena; home-base distance, incursion/excursion, ANOVAs; Basler & Azure Kinect pipelines."
   stack: ["Behavioral Neuroscience", "CV pipelines", "ANOVA/mixed effects", "Python", "C++/Azure Kinect SDK"]
-  link: "TODO(raunit): project page / repo"
-  preprint: "TODO(raunit): preprint/paper"
-  extended: "TODO(raunit): longer write-up"
+  # link: ""  # Add project page / repo when available
+  # preprint: ""  # Add preprint/paper when available
+  # extended: ""  # Add longer write-up when available
 
 - title: "AI Classroom Project (multimodal student wellbeing)"
   summary: "PTP-synchronized embedded system; multimodal data capture and analysis for classroom environments."
   stack: ["Edge HW", "Signal Processing", "Synchronization/PTP", "Python"]
-  link: "TODO(raunit): link"
+  # link: ""  # Add link when available
 
 - title: "RL Regulation Project"
   summary: "Policy evaluation/iteration framing for safety/oversight; practical implications for applied RL."
   stack: ["RL", "Policy Evaluation", "Python"]
-  link: "TODO(raunit): link"
+  # link: ""  # Add link when available
 
 # Copilot suggestions
 - title: "Explore-Exploit Behaviors During Rat-Robot Interactions"

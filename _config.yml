@@ -8,10 +8,10 @@ plugins:
   - jekyll-sitemap
 
 # SEO and social media defaults
-twitter:
-  username: "TODO(raunit): add if you have Twitter"
-facebook:
-  publisher: "TODO(raunit): add if you have Facebook page"
+# twitter:
+#   username: ""  # Add Twitter username if needed
+# facebook:
+#   publisher: ""  # Add Facebook page if needed
 logo: "/assets/img/profile.jpg"
 social:
   name: "Raunit Kohli"
@@ -21,12 +21,12 @@ social:
 
 author:
   name: "Raunit Kohli"
-  email: "raunit.kohli@gmail.com"  # TODO(raunit): verify this is correct email
+  email: "raunit.kohli@gmail.com"  # Verify this is correct email
   url: "https://kohlir2020.github.io"
 
 social:
   github: "kohlir2020"
-  linkedin: "in/raunit-kohli"  # TODO(raunit): verify LinkedIn username
+  linkedin: "in/raunit-kohli"  # Verify LinkedIn username
 
 nav:
   - title: "Home"
@@ -52,4 +52,4 @@ defaults:
 
 # Additional SEO settings
 lang: en_US
-timezone: America/Los_Angeles  # TODO(raunit): adjust timezone as needed
+timezone: America/Los_Angeles  # Adjust timezone as needed

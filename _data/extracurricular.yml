@@ -1,14 +1,14 @@
 - title: "Phi Sigma Pi"
-  summary: "Leadership & service; TODO(raunit): add role(s), dates, impact bullets."
+  summary: "Leadership & service; add role(s), dates, impact bullets when available."
   links: []
 
 - title: "Teaching Assistant"
   summary: "TA roles + guest lectures; include links to lecture slides and recorded talks."
   links:
-    - { text: "Lecture: TODO title", url: "TODO link" }
+    # - { text: "Lecture: Add title", url: "Add link" }
 
 - title: "Robotics Volunteering"
-  summary: "Ongoing mentoring/volunteering in robotics; TODO(raunit): details + any photos or writeups."
+  summary: "Ongoing mentoring/volunteering in robotics; add details + any photos or writeups when available."
   links: []
 
 # Copilot suggestions
@@ -16,12 +16,12 @@
   summary: "Active member for 2+ years (2+ yrs 4 mos noted in LinkedIn). Leadership and service-focused honor fraternity participation."
   links: []
   duration: "2+ years"
-  dates: "TODO(raunit): add specific start/end dates"
+  # dates: "Add specific start/end dates when available"
 
 - title: "Data Science Teaching Assistant - UCSD"
   summary: "TA for upper-division course with 750+ students. Delivered podcasted discussion sections and automated grading scripts."
   links:
-    - { text: "TODO(raunit): Link to recorded discussions", url: "TODO link" }
+    # - { text: "Link to recorded discussions", url: "Add link when available" }
   duration: "Sep 2022 - Dec 2023 (1 yr 4 mos)"
   skills: ["Python", "Pandas", "Matplotlib", "Statistical Analysis", "University Teaching"]
 
@@ -35,7 +35,7 @@
   summary: "Internship developing comprehensive API testing suite. Built 780+ automated tests, identified 15+ critical production bugs."
   links:
     - { text: "GitHub Repository", url: "https://github.com/kohlir2020/ibm-aspera-testing" }
-    - { text: "TODO(raunit): Add demo or presentation", url: "TODO link" }
+    # - { text: "Add demo or presentation", url: "Add link when available" }
   duration: "2023"
   role: "Automation & Testing Development Intern"
   company: "IBM"
