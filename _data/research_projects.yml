@@ -20,16 +20,16 @@
   summary: "Published research optimizing social and spatial security through animal-robot interactions. Data from 2500+ experiments used for behavioral analysis."
   stack: ["Behavioral Analysis", "Statistics", "Python", "Computer Vision", "DeepLabCut", "SLEAP"]
   link: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.897603/full"
-  preprint: "TODO(raunit): check if preprint exists"
-  extended: "TODO(raunit): add detailed methodology"
+  preprint: "TODO check if preprint exists"
+  extended: "TODO add detailed methodology"
   year: 2022
   authors: ["Ian Jackson", "Raunit Kohli", "Eric Leonardis", "Virginia de Sa", "Simon Fei", "Laleh Quinn", "Yifan Lou", "Andrea Chiba"]
 
 - title: "Simulated Information Limitation for Self-Regulation in Bio-Influenced Learning"
   summary: "First-author research investigating information constraints to enhance self-regulatory mechanisms in AI systems. Currently in preparation."
   stack: ["Bio-Inspired Learning", "Self-Regulation", "Exploration-Exploitation", "Cognitive Modeling", "AI"]
-  link: "TODO(raunit): add when published"
-  preprint: "TODO(raunit): add preprint when available"
+  link: "TODO add when published"
+  preprint: "TODO add preprint when available"
   extended: "/example_projects/example_publication/"
   year: 2024
   status: "In Preparation"
@@ -37,7 +37,7 @@
 - title: "PiRat Robotic Animal Interaction System"
   summary: "Technical lead for autonomous differential-drive robot using PPO and Bayesian inference. Optimized pose-estimation software by 300%."
   stack: ["PyTorch", "ROS", "C++", "Proximal Policy Optimization", "Computer Vision", "Kinect SDK", "NumPy"]
-  link: "TODO(raunit): add correct GitHub repo URL"
-  preprint: "TODO(raunit): add preprint if available"
+  link: "TODO add correct GitHub repo URL"
+  preprint: "TODO add preprint if available"
   extended: "/example_projects/pirat-robotic-animal-interaction/"
   year: 2024
