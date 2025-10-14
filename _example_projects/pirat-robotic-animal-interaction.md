@@ -23,7 +23,7 @@ highlights:
   - "Developed comprehensive testing framework and statistical validation using Scikit-learn and Jupyter notebooks"
   - "Created multi-modal data logging system with video recording and visual object representation"
 links:
-  repo: "https://github.com/username/pirat-project"
+  repo: "TODO(raunit): add correct GitHub repo URL"
   paper: "https://www.frontiersin.org/journals/psychology/articles/10.3389/fpsyg.2022.897603/full"
   demo: ""
 featured_image: ""

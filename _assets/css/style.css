@@ -1,0 +1,29 @@
+:root { --max: 920px; --gap: 1rem; }
+* { box-sizing: border-box; }
+body { margin:0; font: 16px/1.6 system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif; color:#111; background:#fff; }
+a { color: inherit; }
+.container { max-width: var(--max); margin: 0 auto; padding: 1.5rem; }
+
+/* Header */
+.site-header{display:flex;justify-content:space-between;align-items:center;padding:1rem 0;border-bottom:1px solid #eee;}
+.site-header a{margin-right:1rem;text-decoration:none;color:#111}
+.brand{font-weight:700}
+
+/* Hero */
+.hero{display:grid;grid-template-columns:110px 1fr;gap:var(--gap);align-items:center;margin:2rem 0;}
+.hero__img{width:110px;height:110px;border-radius:50%;object-fit:cover;border:1px solid #ddd}
+.hero__links a{margin-right:.75rem}
+
+/* Card grid */
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:var(--gap);margin:1.5rem 0;}
+.card{border:1px solid #eee;border-radius:12px;padding:1rem}
+.card h3{margin:.25rem 0 .5rem;}
+.pill{display:inline-block;font-size:.8rem;padding:.2rem .5rem;border:1px solid #ddd;border-radius:999px;margin-right:.25rem;margin-top:.25rem}
+
+/* Footer */
+.site-footer{border-top:1px solid #eee;padding:1rem 0;margin-top:3rem;color:#555}
+
+@media (max-width:560px){
+  .hero{grid-template-columns:80px 1fr;}
+  .hero__img{width:80px;height:80px}
+}

@@ -1,0 +1,35 @@
+- title: "Document RAG with OpenSearch (BM25 + vectors + CrossEncoder rerank)"
+  summary: "Hybrid search with citation scoring and an evaluation harness."
+  stack: ["OpenSearch", "SBERT/text-embedding-3-small", "Cross-Encoder", "LangChain/DSPy", "Python"]
+  repo: "TODO(raunit): link"
+  report: "TODO(raunit): link"
+
+- title: "SAS → Python Porting Assistant"
+  summary: "DSPy-driven spec + critique + unit-test generation for porting SAS macros to robust Python."
+  stack: ["DSPy", "Python", "LLM eval"]
+  repo: "TODO(raunit): link"
+  report: "TODO(raunit): link"
+
+- title: "RL pipelines (Pirat sim, PPO/ACME, imitation learning)"
+  summary: "MuJoCo/dm_control tasks, PPO baselines, PolicyNet imitation; M1 'mps' device support."
+  stack: ["PyTorch", "dm_control/MuJoCo", "Stable-Baselines3", "ACME"]
+  repo: "TODO(raunit): link"
+
+- title: "LLM citation ranking & reliability signals"
+  summary: "Ranking signals to prioritize grounded answers; integrates into RAG UX."
+  stack: ["Python", "OpenAI embeddings", "Re-rankers"]
+  repo: "TODO(raunit): link"
+
+# Copilot suggestions
+- title: "Poetry Title Generator (LIGN167)"
+  summary: "AI-powered creative writing assistant using NLP to generate contextually relevant poetry titles."
+  stack: ["Python", "Natural Language Processing", "Machine Learning", "Text Generation"]
+  repo: "https://github.com/kohlir2020/lign167-poetry-generator"
+  report: "TODO(raunit): add academic report if available"
+  year: 2023
+
+- title: "LLM Citation Generator with Multi-Gaussian Clustering"
+  summary: "Novel citation system using clustering algorithms and semantic similarity for more relevant document references at Rocket Software."
+  stack: ["Python", "Multi-Gaussian Clustering", "Semantic Similarity", "LLMs"]
+  repo: "TODO(raunit): proprietary - add public version or description"
+  year: 2024

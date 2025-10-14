@@ -1,11 +1,55 @@
-title: Raunit Kohli
-description: Machine Learning Software Engineer and Researcher specializing in Reinforcement Learning, Computer Vision, and AI applications. Experienced in robotics, data science, and innovative ML solutions.
-url: https://kohlir2020.github.io
-baseurl: ""
-theme: jekyll-theme-cayman
+title: "Raunit Kohli - ML Engineer & Researcher"
+description: "Machine Learning Engineer at Rocket Software and UCSD Research Staff specializing in LLM systems, reinforcement learning, and robotic AI. Published researcher with expertise in citation generation, animal-robot interaction, and production ML pipelines."
+url: "https://kohlir2020.github.io"     # change after you set a custom domain
+baseurl: ""                              # user site => empty
+theme: minima
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# SEO and social media defaults
+twitter:
+  username: "TODO(raunit): add if you have Twitter"
+facebook:
+  publisher: "TODO(raunit): add if you have Facebook page"
+logo: "/assets/img/profile.jpg"
+social:
+  name: "Raunit Kohli"
+  links:
+    - "https://github.com/kohlir2020"
+    - "https://www.linkedin.com/in/raunit-kohli"
+
+author:
+  name: "Raunit Kohli"
+  email: "raunit.kohli@gmail.com"  # TODO(raunit): verify this is correct email
+  url: "https://kohlir2020.github.io"
 
 social:
-  name: Raunit Kohli
-  links:
-    - https://www.linkedin.com/in/yourprofile
-    - https://github.com/kohlir2020
+  github: "kohlir2020"
+  linkedin: "in/raunit-kohli"  # TODO(raunit): verify LinkedIn username
+
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "ML/LLM Projects"
+    url: "/ml-llm"
+  - title: "Research"
+    url: "/research"
+  - title: "Extracurricular"
+    url: "/extracurricular"
+
+# SEO defaults for better search engine optimization
+defaults:
+  - scope: { path: "" }
+    values: 
+      layout: default
+      image: /assets/img/profile.jpg
+      author: Raunit Kohli
+  - scope: { path: "", type: "posts" }
+    values:
+      layout: default
+      author: Raunit Kohli
+
+# Additional SEO settings
+lang: en_US
+timezone: America/Los_Angeles  # TODO(raunit): adjust timezone as needed
