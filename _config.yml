@@ -1,56 +1,16 @@
 title: "Raunit Kohli - ML Engineer & Researcher"
-description: "Machine Learning Engineer at Rocket Software and UCSD Research Staff specializing in LLM systems, reinforcement learning, and robotic AI. Published researcher with expertise in citation generation, animal-robot interaction, and production ML pipelines."
-url: "https://kohlir2020.github.io"     # change after you set a custom domain
-baseurl: ""                              # user site => empty
-remote_theme: pages-themes/minimal
-plugins:
-  - jekyll-seo-tag
-  - jekyll-sitemap
-  - jekyll-remote-theme
-
-# SEO and social media defaults
-# twitter:
-#   username: ""  # Add Twitter username if needed
-# facebook:
-#   publisher: ""  # Add Facebook page if needed
-logo: "/assets/img/profile.jpg"
-social:
-  name: "Raunit Kohli"
-  links:
-    - "https://github.com/kohlir2020"
-    - "https://www.linkedin.com/in/raunit-kohli"
+url: "https://www.raunitkohli.com"
+baseurl: ""
 
 author:
   name: "Raunit Kohli"
-  email: "raunit.kohli@gmail.com"  # Verify this is correct email
+  email: "raunitkohli@gmail.com"  # Verify this is correct email
   url: "https://kohlir2020.github.io"
 
 social:
   github: "kohlir2020"
   linkedin: "in/raunit-kohli"  # Verify LinkedIn username
 
-nav:
-  - title: "Home"
-    url: "/"
-  - title: "ML/LLM Projects"
-    url: "/ml-llm"
-  - title: "Research"
-    url: "/research"
-  - title: "Extracurricular"
-    url: "/extracurricular"
-
-# SEO defaults for better search engine optimization
-defaults:
-  - scope: { path: "" }
-    values: 
-      layout: default
-      image: /assets/img/profile.jpg
-      author: Raunit Kohli
-  - scope: { path: "", type: "posts" }
-    values:
-      layout: default
-      author: Raunit Kohli
-
 # Additional SEO settings
 lang: en_US
-timezone: America/Los_Angeles  # Adjust timezone as needed
+timezone: America/New_York  # Adjust timezone as needed

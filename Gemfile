@@ -5,3 +5,6 @@ gem "github-pages", group: :jekyll_plugins
 
 # Local dev server for Ruby 3+
 gem "webrick", "~> 1.8"
+
+# Install the Leap Day theme locally
+gem "jekyll-theme-leap-day"
