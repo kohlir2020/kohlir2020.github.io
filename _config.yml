@@ -1,16 +1,40 @@
-title: "Raunit Kohli - ML Engineer & Researcher"
+title: "Raunit Kohli — ML Engineer & Researcher"   # used for <title> / SEO
+brand: "Raunit Kohli"                               # short header label
+description: "ML engineer at Rocket Software and UCSD research staff working on LLM systems, RL, and neurorobotics."
 url: "https://www.raunitkohli.com"
 baseurl: ""
 
 author:
   name: "Raunit Kohli"
-  email: "raunitkohli@gmail.com"  # Verify this is correct email
+  email: "raunitkohli@gmail.com"
   url: "https://kohlir2020.github.io"
 
 social:
   github: "kohlir2020"
-  linkedin: "in/raunit-kohli"  # Verify LinkedIn username
+  linkedin: "in/raunit-kohli"
+  email: "raunitkohli@gmail.com"
 
-# Additional SEO settings
+nav:
+  - title: "Home"
+    url: "/"
+  - title: "Work"
+    url: "/work/"
+  - title: "Research"
+    url: "/research/"
+  - title: "Extracurricular"
+    url: "/extracurricular/"
+  - title: "Resume"
+    url: "/resume/"
+
 lang: en_US
-timezone: America/New_York  # Adjust timezone as needed
+timezone: America/New_York
+
+# Optional: pretty URLs and basic plugins GitHub Pages supports
+permalink: pretty
+plugins:
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope: { path: "" }
+    values: { layout: default }

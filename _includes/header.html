@@ -1,0 +1,10 @@
+<header>
+  <h1>{{ site.brand }}</h1>
+  <nav>
+    <ul>
+      {% for item in site.nav %}
+        <li><a href="{{ item.url | relative_url }}">{{ item.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

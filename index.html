@@ -1,87 +1,51 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Home - Raunit Kohli</title>
-  <!-- Import custom stylesheet and fonts -->
-  <link rel="stylesheet" href="style.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
-</head>
-<body>
-  <!-- Persistent header with site title and navigation links -->
-  <header>
-    <h1>Raunit Kohli</h1>
-    <nav>
+---
+layout: default
+title: "Home"
+---
+
+<!-- Large name on landing page -->
+<h2 class="big-title">Raunit Kohli</h2>
+
+<!-- Two‑column layout: photo and summary -->
+<div class="home-container">
+  <div class="photo-container">
+    <img src="assets/IMG_4832.jpeg" alt="Profile image" />
+  </div>
+  <div class="summary-container">
+    <p>
+      <!-- Short summary placeholder -->
+      Passionate and motivated Machine Learning Software Engineer at Rocket Software with 
+      Professional Research Experience in Cognitive Science at UC San Diego. Dedicated team 
+      member with strong interpersonal skills and Agile experience passionate about 
+      Reinforcement Learning, Motion Profiling, Generative AI, and predictive data analytics. 
+      Published problem-solver seeking opportunities to advance the field of Deep RL.
+    </p>
+    <!-- Box for SWE and LLMs -->
+    <div class="box swe">
+      <h2>What I'm doing with LLMs</h2>
       <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="work.html">Work</a></li>
-        <li><a href="research.html">Research</a></li>
-        <li><a href="extracurricular.html">Extracurricular</a></li>
-        <li><a href="resume.html">Resume</a></li>
+        <li>Coding AI-powered internal tooling to optimize enterprise efficiency.</li>
+        <li>Building lecture series on upskilling the workforce in AI principles.</li>
+        <li>Exploring LLM Reasoning Agents as an optimizer for Deep RL training pipelines.</li>
       </ul>
-    </nav>
-  </header>
-
-  <main>
-    <!-- Large name on landing page -->
-    <h2 class="big-title">Raunit Kohli</h2>
-
-    <!-- Two‑column layout: photo and summary -->
-    <div class="home-container">
-      <div class="photo-container">
-        <img src="assets/IMG_4832.jpeg" alt="Profile image" />
-      </div>
-      <div class="summary-container">
-        <p>
-          <!-- Short summary placeholder -->
-          Passionate and motivated Machine Learning Software Engineer at Rocket Software with 
-          Professional Research Experience in Cognitive Science at UC San Diego. Dedicated team 
-          member with strong interpersonal skills and Agile experience passionate about 
-          Reinforcement Learning, Motion Profiling, Generative AI, and predictive data analytics. 
-          Published problem-solver seeking opportunities to advance the field of Deep RL.
-        </p>
-        <!-- Box for SWE and LLMs -->
-        <div class="box swe">
-          <h2>What I'm doing with LLMs</h2>
-          <ul>
-            <li>Coding AI-powered internal tooling to optimize enterprise efficiency.</li>
-            <li>Building lecture series on upskilling the workforce in AI principles.</li>
-            <li>Exploring LLM Reasoning Agents as an optimizer for Deep RL training pipelines.</li>
-          </ul>
-          <a href="work.html">Learn more</a>
-        </div>
-        <!-- Box for RL and pro‑social behaviours -->
-        <div class="box rl">
-          <h2>What I'm doing with RL and Pro-Social Behavior</h2>
-          <ul>
-            <li>Analyzing homebase-derived proxemic features as a tool for pro-social rat-robot interactions.</li>
-            <li>Experimenting with real-time physics simulations of bio-influenced robotic exploration tasks.</li>
-            <li>Designing novel sub-second precise multi-modal embedded systems for Pre-K classroom attention analysis.</li>
-          </ul>
-          <a href="research.html">Learn more</a>
-        </div>
-      </div>
+      <a href="work.html">Learn more</a>
     </div>
+    <!-- Box for RL and pro‑social behaviours -->
+    <div class="box rl">
+      <h2>What I'm doing with RL and Pro-Social Behavior</h2>
+      <ul>
+        <li>Analyzing homebase-derived proxemic features as a tool for pro-social rat-robot interactions.</li>
+        <li>Experimenting with real-time physics simulations of bio-influenced robotic exploration tasks.</li>
+        <li>Designing novel sub-second precise multi-modal embedded systems for Pre-K classroom attention analysis.</li>
+      </ul>
+      <a href="research.html">Learn more</a>
+    </div>
+  </div>
+</div>
 
-    <!-- Floating socials box -->
-    <div class="social-floating">
-      <a href="https://www.linkedin.com/in/raunit-kohli/"><i class="fab fa-linkedin"></i>LinkedIn</a>
-      <a href="https://github.com/kohlir2020"><i class="fab fa-github"></i>GitHub</a>
-      <a href="#"><i class="fab fa-spotify"></i>Spotify</a>
-    </div>
-  </main>
-
-  <footer>
-    <div class="license">
-      © 2025 Raunit Kohli. All rights reserved.
-    </div>
-    <div class="footer-icons">
-      <a href="https://www.linkedin.com/in/raunit-kohli/"><i class="fab fa-linkedin"></i></a>
-      <a href="https://github.com/kohlir2020"><i class="fab fa-github"></i></a>
-      <a href="mailto:raunitkohli@gmail.com"><i class="fas fa-envelope"></i></a>
-    </div>
-  </footer>
-</body>
-</html>
+<!-- Floating socials box -->
+<div class="social-floating">
+  <a href="https://www.linkedin.com/in/raunit-kohli/"><i class="fab fa-linkedin"></i>LinkedIn</a>
+  <a href="https://github.com/kohlir2020"><i class="fab fa-github"></i>GitHub</a>
+  <a href="#"><i class="fab fa-spotify"></i>Spotify</a>
+</div>
