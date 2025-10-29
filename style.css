@@ -7,7 +7,7 @@
 
 :root {
   /* Base colours */
-  --bg-color: #0a0a23;
+  --bg-color: #101035;
   --primary-color: #00bfff;
   --secondary-color: #1a1a40;
   --accent-color: #ff007f;
@@ -72,7 +72,7 @@ nav a:focus {
 
 /* ----- Main layout ----- */
 main {
-  padding: 120px 40px 60px;
+  padding: 120px 80px 60px;
 }
 
 .big-title {
@@ -218,19 +218,46 @@ main {
   border-radius: 6px;
 }
 
-/* RL items use accent colour */
-.item.rl {
-  border-left-color: var(--accent-color);
-}
-
 .item h3 {
   margin: 0 0 5px;
-  font-size: 1.6rem;
+  font-size: 1.3rem;
   color: var(--primary-color);
 }
 
-.item.rl h3 {
+/* Alternating colors: use adjacent sibling combinator to create blue-red pattern */
+/* Every item that follows another item gets the opposite color */
+.item + .item {
+  border-left-color: var(--accent-color);
+}
+
+.item + .item h3 {
   color: var(--accent-color);
+}
+
+/* Every item that follows a red item becomes blue */
+.item + .item + .item {
+  border-left-color: var(--primary-color);
+}
+
+.item + .item + .item h3 {
+  color: var(--primary-color);
+}
+
+/* Continue the pattern */
+.item + .item + .item + .item {
+  border-left-color: var(--accent-color);
+}
+
+.item + .item + .item + .item h3 {
+  color: var(--accent-color);
+}
+
+.item + .item + .item + .item + .item {
+  border-left-color: var(--primary-color);
+}
+
+.item + .item + .item + .item + .item h3 {
+  color: var(--primary-color);
 }
 
 .item .subtitle {
@@ -337,6 +364,10 @@ footer .footer-icons a:hover {
   nav a {
     font-size: 0.9rem;
     padding: 5px 8px;
+  }
+  
+  main {
+    padding: 120px 40px 60px;
   }
   
   .home-container {
