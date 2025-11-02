@@ -246,6 +246,12 @@ main {
   color: #aaa;
 }
 
+.item .subtitle_list {
+  margin: 0 0 5px;
+  font-size: 0.9rem;
+  color: #aaa;
+}
+
 .item p,
 .item ul {
   margin: 0 0 10px;
