@@ -263,6 +263,33 @@ main {
   padding-left: 20px;
 }
 
+/* Side image for items: small square image floated to the right with responsive fallback */
+.item .item-image-link {
+  display: inline-block;
+  line-height: 0;
+}
+
+.item .item-image {
+  float: right;
+  width: 96px;
+  height: 96px;
+  object-fit: cover;
+  border-radius: 4px;
+  margin-left: 16px;
+  margin-bottom: 8px;
+  display: block;
+}
+
+@media (max-width: 600px) {
+  .item .item-image {
+    float: none;
+    margin: 0 0 12px 0;
+    width: 100%;
+    height: auto;
+    max-width: 220px;
+  }
+}
+
 .tags {
   display: flex;
   flex-wrap: wrap;

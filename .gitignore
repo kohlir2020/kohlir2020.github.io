@@ -4,3 +4,5 @@ _site/
 .bundle/
 node_modules/
 .DS_Store
+vendor/
+_config_local.yml

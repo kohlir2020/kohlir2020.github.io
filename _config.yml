@@ -7,7 +7,7 @@ baseurl: ""
 author:
   name: "Raunit Kohli"
   email: "raunitkohli@gmail.com"
-  url: "https://kohlir2020.github.io"
+  url: "https://www.raunitkohli.com"
 
 social:
   github: "kohlir2020"
@@ -17,7 +17,7 @@ social:
 nav:
   - title: "Home"
     url: "/"
-  - title: "Work"
+  - title: "Industry"
     url: "/work/"
   - title: "Research"
     url: "/research/"
