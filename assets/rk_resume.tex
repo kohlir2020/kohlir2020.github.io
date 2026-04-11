@@ -1,0 +1,278 @@
+%-------------------------
+% Resume in Latex
+% Author : Abey George
+% Based off of: https://github.com/sb2nov/resume
+% License : MIT
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-2.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{amsmath}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usepackage{changepage}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+
+%----------FONT OPTIONS----------
+% sans-serif
+% \usepackage[sfdefault]{FiraSans}
+% \usepackage[sfdefault]{roboto}
+% \usepackage[sfdefault]{noto-sans}
+% \usepackage[default]{sourcesanspro}
+
+% serif
+% \usepackage{CormorantGaramond}
+% \usepackage{charter}
+
+
+% \pagestyle{fancy}
+% \fancyhf{}  % clear all header and footer fields
+% \fancyfoot{}
+% \renewcommand{\headrulewidth}{0pt}
+% \renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.6in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.19in}
+\addtolength{\topmargin}{-.7in}
+\addtolength{\textheight}{1.4in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%\setlist[itemize]{itemsep=5pt, parsep=0pt} % Fixes the list spacing
+
+%-------------------------
+% Custom commands
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+%\newcommand{\educationSection}[9]{
+%  \vspace{2pt}\item
+%    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+%      \textbf{\large#1} & \textbf{\small #2} \\
+%      \text{\large#3} & \text{\small #4} \\
+%      \textbf{#5} \text{#6}; \textbf{#7} \text{#8} \\
+%      \textbf{#9} \text{#10} \\
+%      
+%    \end{tabular*}\vspace{-7pt}
+%}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \hspace{12pt}\text{#3} & \text{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=-1pt, parsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-9pt}}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+\newcommand{\multiLineResumeItem}[1]{\item\begin{spacing}{1.2}\small{#1}\end{spacing}}
+\newcommand{\courseItem}[1]{\item\small\begin{center} #1\end{center}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  RESUME STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+
+\begin{center}
+    {\Huge \scshape Raunit Kohli} \\ \vspace{3pt}
+    \small \href{https://www.raunitkohli.com/}{\raisebox{-0.1\height}\faGithub\ \underline{raunitkohli.com}} ~ \href{tel:+1-7742629233}{\raisebox{-0.1\height}\faPhone\ \underline{774-262-9233}} ~ \href{mailto:raunitkohli@gmail.com}{\raisebox{-0.1\height}\faEnvelope\ \underline{raunitkohli@gmail.com}} ~ \href{https://linkedin.com/in/raunit-kohli/}{\raisebox{-0.1\height}\faLinkedinSquare\ \underline{raunit-kohli}} ~
+    \vspace{-7pt}
+\end{center}
+
+%-----------EXPERIENCE-----------
+\section{WORK EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Rocket Software} {Boston, MA} 
+      {Machine Learning Software Engineer II}{09/2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Design and implement novel Large Language Model Citation Generator using multi-Gaussian clustering algorithms and dynamic content similarity techniques, yielding 80\% more relevant document references for production-grade RAG model.}
+        \resumeItem{Deploy RESTful API endpoint for user query feedback in parallel collaboration with cross-functional teams against time-critical deadline, allowing for immediate customer feedback necessary for creating gold-standard datasets.}
+        \resumeItem{Perform experimental process of fine-tuning, testing, and evaluating multiple transformer-based sentence embedding models with custom tokenizers to balance keyword relevance and semantic similarity for improved document reranking.}
+        \resumeItem{Develop proof-of-concept few-shot LLM prompting framework to translate natural language queries into executable SQL, integrating regex-based syntax validation, enhancing table-based document retrieval and question answering.}
+        \resumeItem{Augment state-of-the-art AI Code Assistant tools to create a novel LLM-powered SAS to Python IT chain management code translation tool. Build and integrate ReAct agent for SAS code analysis and equivalent Python architecture generation.}
+        \resumeItem{Utilize AWS CloudWatch and develop multi-purpose scripts to parse and analyze on-going trial logs, enabling proactive troubleshooting and creating consistently responsive data to customer requests, leading to higher user satisfaction.}
+      \resumeItemListEnd 
+
+      \vspace{-2pt}\item
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Robotics Using Bayesian Inference Lab - UC San Diego} & \textbf{\small San Diego, CA} \\
+         \hspace{12pt}\text{Machine Learning Research Consultant \href{https://raunitkohli.com/research}{\footnotesize{\underline{(Published)}}}} & \text{\small 09/2024 -- Present} \\
+      \end{tabular*}\vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Developed analysis pipeline and co-authored IEEE ICDL 2025 publication on explore-exploit dynamics during rat-robot social interactions, characterizing homebase-derived proxemic features for pro-social behavior.}
+        \resumeItem{Led technical engineering of network synchronized multi-modal Embedded-System aimed to host AI-powered classroom.}
+      \resumeItemListEnd 
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{12pt}\text{Staff Machine Learning Research Engineer  \href{https://raunitkohli.com/research}{\footnotesize{\underline{(Published)}}}} & \text{\small 01/2021 -- 09/2024} \\
+      \end{tabular*}\vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Spearheaded implementation of Reinforcement Learning algorithms in PyTorch for robotic PiRat with ROS utilizing extensive neural and positional data from 2500+ rat experiments to mimic and predict multi-agent interactions.}
+        \resumeItem{Developed signal processing applications for live and post analysis, leveraging advanced filtering techniques to enhance identification of stress-inducing behaviors from neural and physiological signals (HRV, PPG) of project subjects.}
+        \resumeItem{Built real-time Homebase Detection Algorithm with convolution feature extractor for novel experiment apparatus.}
+        \resumeItem{Enhanced and scaled production-deployed Computer Vision-based live Pose-Estimation Software in C++ to validate statistical accuracy of Kinect Tracker, introducing new features and parameter logging, leading to 300\% processing speed.}
+      \resumeItemListEnd 
+
+    \resumeSubheading
+      {IBM (International Business Machines)} {San Jose, CA} 
+      {Automation and Testing Developer Intern}{06/2023 -- 09/2023}
+      \resumeItemListStart
+        \resumeItem{Scripted in Ruby to automate API endpoint testing for entire IBM Aspera on Cloud Workflows App designed to automate workflows of global content transfer and exchange across on-premises and multi-cloud environments.}
+        \resumeItem{Developed and documented comprehensive automated regression framework with 780+ API tests covering all endpoints.}
+        \resumeItem{Identified 15+ critical issues and bugs on live production server, communicated with developers to determine ideal expected behavior, and raised issues in project management tools to expertly report relevant failure details.}
+      \resumeItemListEnd 
+    \resumeSubHeadingListEnd
+
+\vspace{-16pt} % already has a -8 above it
+
+%-------------PROJECTS------------------
+\section{HIGHLIGHTED PROJECTS}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+  \resumeItem{
+    \textbf{VLM-Guided Hierarchical RL in Habitat-Lab} (WPI RL Course, 2024) -- Hierarchical PPO/SAC for Fetch in Habitat-Lab with a VLM high-level planner for navigation/manipulation from language; \href{https://www.raunitkohli.com/research}{\underline{details}}.}\\[-2pt]
+  \resumeItem{
+    \textbf{Bio-Influenced Regulation Framework} (RUBI Lab, 2023--2024) -- Simulated rat--robot regulation using RL/control ideas on 2500+ neural + pose trials to study multi-agent behavior; \href{https://www.raunitkohli.com/research}{\underline{details}}.}\\[-2pt]
+  \resumeItem{
+    \textbf{Rocket.Build: LLM-Powered Documentation Search} (Rocket Software, 2024) -- RAG prototype using OpenSearch + reranking to improve internal doc/ticket relevance for support workflows; \href{https://www.raunitkohli.com/work}{\underline{details}}.}\\[-2pt]
+  \resumeItem{
+    \textbf{Rocket AI Enablement Lecture Series} (Rocket Software, 2024) -- Internal LLM/GenAI lectures + notebooks on prompting, evaluation, and Python API usage, adopted by engineering teams; \href{https://www.raunitkohli.com/work}{\underline{details}}.}
+\resumeSubHeadingListEnd
+
+\vspace{-18pt}
+\section{TECHNICAL SKILLS}
+\vspace{-2pt}
+    \begin{itemize}[leftmargin=0in, label={}]
+    \item
+    \small \textbf{Languages:}{ Python, Ruby, Java, C++, SQL, Unix;} \textbf{Agile:}{ Atlassian (Jira, Confluence, Bitbucket), Git(hub), M365 Suite} \\[1pt]
+    \small \textbf{Skills:} Policy-Optimization Algorithms, NLPs, Data Visualization, API Development, Neural Networks, Data Structures, ML Classification/Regression, Markov Decision Processes, Kubernetes Deployment, AWS Suite Supervision, Signal Processing \\
+    \end{itemize}
+\vspace{-20pt}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+    \vspace{-2pt}
+    %\begin{itemize}[leftmargin=0.15in, label={}]
+    %\item
+        \begin{tabular*}{\dimexpr\textwidth\relax}{@{}l@{\extracolsep{\fill}}r@{}}
+        \textbf{University of California -- San Diego} & \textbf{\small 09/2020 -- 12/2023} \\[1pt]
+        Bachelor of Science, Machine Learning and Neural Computation & \small Major GPA: 3.91/4.0 \\
+        \end{tabular*}
+        \begin{tabular}{@{}l}
+        \small\textbf{Minor:} \small{Computer Science}; \textbf{Program of Concentration:} \small{Philosophy} \\[0.5pt]
+        \small\textbf{Awards:} \small{President \& Recruitment Advisor -- Phi Sigma Pi National Honor Fraternity; Provost Honors (Warren College)} \\
+        \end{tabular}
+    %\end{itemize}
+\vspace{-24pt}
+
+%------RELEVANT COURSEWORK-------
+%\section{}
+%    \begin{tabular}{@{}l}
+%    %\normalsize{\textbf{Skills:}} \small{Software Technique, Markov Process, Test Dev, AWS, GPU/CUDA;} \normalsize{\textbf{Languages:}} \small{Python, Ruby, Java, C++, BASH} \\
+%    %\normalsize{\textbf{Scrum:}} \small{Agile, Jira, Confluence, Github, Zenhub, BoxNote;} \normalsize{\textbf{Libraries:}} \small{PyTorch, Pandas, TensorFlow, NumPy, HuggingFace} \\
+%    \normalsize{\textbf{Courses:}} \small{Deep Learning for NLP, Neural Networks, Data Modeling, Advanced Topics LLMs, Supervised/Unsupervised ML} \\
+%    \end{tabular}
+    %\begin{multicols}{3}
+    %    \begin{itemize}[itemsep=-2pt, parsep=3pt]
+    %        \courseItem{Data Structures \& Algorithms}
+    %        \courseItem{Neural Networks}
+    %        \courseItem{Supervised \& Unsupervised ML}
+    %        \courseItem{Data Modeling}
+    %        \courseItem{Markov Decision Processes}
+    %        \courseItem{Advanced Topics LLMs}
+    %    \end{itemize}
+    %\end{multicols}
+    %\vspace*{1.5\multicolsep}
+
+\end{document}
