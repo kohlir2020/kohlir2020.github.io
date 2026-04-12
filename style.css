@@ -305,6 +305,19 @@ main {
   font-size: 0.8rem;
 }
 
+/* Lighter link color for in-content anchors (e.g. extracurricular items) */
+.item li a {
+  color: #7dd3fc;
+  text-decoration: none;
+  border-bottom: 1px solid #7dd3fc;
+  transition: color 0.3s ease, border-bottom-color 0.3s ease;
+}
+
+.item li a:hover {
+  color: var(--accent-color);
+  border-bottom-color: var(--accent-color);
+}
+
 .links {
   margin-top: 10px;
 }
