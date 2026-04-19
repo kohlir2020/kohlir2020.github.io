@@ -78,7 +78,7 @@ Previous AI sessions fabricated content including fake publication authors, coun
 These CV items are intentionally NOT on the website (too granular for a web page):
 - Fine-tuning embeddings, feedback API, AWS CloudWatch, customer collaboration bullets
 - IBM watsonx hackathon, Rocket intern training series bullets
-- NeuroPos pipeline, Hermite Splines/Pure Pursuit (supporting research details)
+- NeuroPos pipeline (supporting research details)
 - Coursework section (Deep Learning for NLP, Neural Networks, etc.)
 - Data visualization, statistical pipelines bullets
 
