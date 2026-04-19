@@ -79,8 +79,8 @@ Searched for 2026 postings at companies aligned with Raunit's interests:
 - ✅ MuJoCo/sim-to-real language missing → added via Regulation project
 - ✅ No Docker/deployment keywords → added via EVA product
 - ⚠️ No public GitHub repos (most code NDA'd/under grants) — user may create 1-2
-- ⚠️ Google Scholar profile not publicly findable — user says they're on it
-- ⚠️ PiRat RL project page on website still has placeholder text
+- ✅ Google Scholar profile found and added: https://scholar.google.com/citations?user=abZZ14QAAAAJ
+- ✅ PiRat RL project page on website filled with content (was placeholder)
 
 ---
 
@@ -211,7 +211,7 @@ From content.md's detailed tech stack description:
 ### RL Regulation Framework
 - MuJoCo simulation environment
 - Uses Google DeepMind tools
-- Multiple policy optimization algorithms (PPO, SAC)
+- Multiple policy optimization algorithms (user said "multiple policy algorithms" — specific names like PPO/SAC not confirmed for this project; kept general)
 - Models exploration-regulation dynamics in autonomous robotic behavior
 - Bio-influenced: mimicking rat grooming behaviors for positive exploration-regulation effects
 - Ongoing/confidential — keep descriptions general
@@ -248,10 +248,10 @@ See [Publications](#publications) section below.
 1. **ICDL 2025** (2nd author): I. Jackson, **R. Kohli**, E. Leonardis, V. R. de Sa, S. Fei, L. Quinn, Y. Lou, A. A. Chiba. "Explore-Exploit Behaviors During Rat-Robot Interactions Optimize Social and Spatial Security." *IEEE International Conference on Development and Learning*, 2025.
    - IEEE: https://ieeexplore.ieee.org/document/11204421
 
-2. **Frontiers in Psychology 2022**: E. Leonardis, A. Bhaskara, S. Fei, **R. Kohli**, A. A. Chiba. "Interactive neurorobotics: Behavioral and neural dynamics of agent interactions." *Frontiers in Psychology*, Sec. Cognitive Science, Vol. 13, 2022.
+2. **Frontiers in Psychology 2022**: E. J. Leonardis, L. Breston, R. Lucero-Moore, L. Sena, **R. Kohli**, L. Schuster, L. Barton-Gluzman, L. K. Quinn, J. Wiles, A. A. Chiba. "Interactive neurorobotics: Behavioral and neural dynamics of agent interactions." *Frontiers in Psychology*, Sec. Cognitive Science, Vol. 13, 2022.
    - DOI: https://doi.org/10.3389/fpsyg.2022.897603
 
-3. **BCI 2025** (Abstract): I. Jackson, **R. Kohli**, E. Leonardis, S. Fei, L. Quinn, V. R. de Sa, A. A. Chiba. "Robotic Exploratory Control Via Subcortical Oscillations." *11th International Brain-Computer Interface Meeting*, 2025.
+3. **BCI 2025** (Abstract): I. Jackson, **R. Kohli**, R. Lucero-Moore, Y. Lou, L. K. Quinn, L. Breston, J. Wiles, A. A. Chiba, E. Leonardis. "Robotic Exploratory Control Via Subcortical Oscillations." *11th International Brain-Computer Interface Meeting*, 2025.
    - PDF: https://openlib.tugraz.at/download.php?id=686289f5ddb80&location=browse
 
 ---
@@ -262,7 +262,7 @@ See [Publications](#publications) section below.
 - Hierarchical PPO/SAC for Fetch robot
 - Vision-Language Model high-level planner
 - Autonomous navigation and manipulation from language instructions
-- Reward shaping and policy optimization across dual-layer hierarchy
+- ~~Reward shaping and dual-layer hierarchy~~ (removed — these details were AI-hallucinated, not provided by user)
 
 ### Smart Scrum Master (Rocket.Build 2025)
 - See Rocket Software section above
@@ -277,7 +277,7 @@ See [Publications](#publications) section below.
 ### VEX Robotics Autonomous Systems Coaching (GHS)
 - Mentoring competitive VEX Robotics team
 - Autonomous path planning: PID control, cubic spline trajectory generation, odometry-based localization, sensor fusion
-- Curriculum covers control theory fundamentals, directly maps to ROS-based architectures
+- Curriculum covers control theory fundamentals (note: "directly maps to ROS-based architectures" was AI-hallucinated — user did not state this connection)
 
 ### MultiValue Experience Unit Test Coverage (Rocket)
 - Foundational unit test framework with OOP mocking and line coverage
@@ -347,14 +347,14 @@ Requires LaTeX distribution (macOS: `brew install --cask basictex`)
 - **AI enablement numbers:** User's own lectures achieved 100% application rate. The 1800+ engineers number is about a vendor collaboration the user coordinates, NOT the user's direct training audience.
 - **Country names:** User said "global Rocket locations" but did NOT list specific countries. Do not fabricate country lists.
 - **ICDL 2025:** Raunit IS 2nd author — strong position.
-- **Google Scholar:** Raunit claims to be listed but no public profile URL was found. Kept as commented-out placeholder in CV LaTeX.
+- **Google Scholar:** Found and verified — https://scholar.google.com/citations?user=abZZ14QAAAAJ — uncommented in CV LaTeX and added to website homepage.
 - **RL Regulation project:** Ongoing/confidential — descriptions kept general (MuJoCo, multiple policy algorithms, exploration-regulation dynamics).
 - **Code availability:** Most code is NDA'd or under active research grants. User may create 1-2 public repos but can't share most work.
 - **PiRat uses ROS2** (NOT ROS1 as might be assumed from older papers).
 - **Two resume versions:** 1-page industry resume focuses on high-impact bullets and keywords; multi-page CV expands everything for academic audiences.
 - **IBM internship:** Removed as a work experience section on industry resume; Aspera test suite is a project there. Full IBM section retained on CV.
 - **AI Classroom placement:** Listed under Research Consultant role (current) on industry resume; could fit under either Staff or Consultant role per user.
-- **AI enablement numbers:** User's own lectures achieved 100% content application rate. The 1800+ engineers number is about a vendor collaboration program the user is coordinating, NOT the user's direct training audience. These must be described separately.
+- **AI enablement numbers:** User's own lectures achieved 100% content application rate. The 1800+ engineers number is about a vendor collaboration program the user is coordinating, NOT the user's direct training audience.
 - **Country names:** User said "global Rocket locations" — specific countries (US, India, UK, Czech Republic, China) were NOT provided by user and should not be listed.
 
 ---
@@ -401,8 +401,9 @@ Requires LaTeX distribution (macOS: `brew install --cask basictex`)
 
 ---
 
-## Known Website Issues (Future Work)
-- PiRat RL project on research.html still has placeholder text ("[Summary to be added]")
-- VEX Robotics on extracurricular.html may need expansion
-- index.html has "Please hire me!" text that could be more professional
-- Google Scholar link needs to be added once profile URL is confirmed
+## Known Website Issues (Status as of April 2026)
+- ✅ PiRat RL project on research.html — filled with content
+- ✅ VEX Robotics on extracurricular.html — expanded with PID/splines/odom/sensor fusion
+- ✅ index.html "Please hire me!" text — updated to professional copy
+- ✅ Google Scholar — added to homepage social links and CV header
+- All major website issues resolved. Website, resume, and CV are in sync.
