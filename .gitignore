@@ -6,3 +6,9 @@ node_modules/
 .DS_Store
 vendor/
 _config_local.yml
+
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.synctex.gz
