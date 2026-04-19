@@ -152,9 +152,8 @@ Searched for 2026 postings at companies aligned with Raunit's interests:
 - Acted as basis for subsequent AI-focused optimizations and developer enablement trainings
 
 ### Other Rocket Details
-- AI Center of Excellence — founding member; collaborated with DSPy library creators and industry researchers
+- AI Center of Excellence — working with the CoE to bring advanced AI tooling to expert engineers (NOT a founding member; does NOT collaborate with DSPy creators — DSPy is just a library used)
 - Main languages/libraries: Python, DSPy, LangChain, PyTorch, HuggingFace
-- Coordinates with Kubernetes orchestration teams, AWS suite for production deployment
 - MultiValue Experience Unit Test Coverage project (earlier role): launched foundational unit test framework with OOP mocking, 30% line coverage (3x OKR goal)
 
 ---
@@ -225,15 +224,13 @@ From content.md's detailed tech stack description:
 - Built initial pilot system for multimodal live synced secure data streaming/recording in Pre-K classroom
 - Main point of contact for technical specifications
 - Architecture based on PTPv2 (Precision Time Protocol v2)
-- Components:
+- Components confirmed by user:
   - High-precision Basler cameras
   - Custom Arduino firmware for OpenBCI Emotibits (biophysical signal detection)
   - Lab Streaming Layer (LSL)
-  - Dante networking
-  - On-prem quartz crystal grandmaster clock for sub-second sync across all data streams
-  - Neuromorphic sensors
-  - Wearable physiological monitors
+  - PTPv2 synchronization
 - Exhaustive knowledge transfer sessions with new hires
+- Note: "Dante networking", "on-prem quartz crystal grandmaster clock", "neuromorphic sensors", and "wearable physiological monitors" were found during directory exploration but NOT confirmed by user — do not include on resume without confirmation
 - Can be categorized under either Staff Researcher or Consultant role
 
 ### Research Team Management
@@ -345,15 +342,20 @@ Requires LaTeX distribution (macOS: `brew install --cask basictex`)
 
 ## Key Decisions & Distinctions
 
-- **ACE paper (arxiv:2510.04618):** Raunit collaborated on/used the ACE framework but is NOT an author. Resume says "leveraged" / "with ACE optimization framework", not "co-authored."
+- **ACE framework (arxiv:2510.04618):** Raunit collaborated on/used the ACE framework but is NOT an author. Resume says "collaborating on ACE optimization framework", not "co-authored."
+- **AI Center of Excellence:** Raunit works WITH the CoE. He is NOT a "founding member" and did NOT "collaborate with DSPy library creators." DSPy is simply a library he uses.
+- **AI enablement numbers:** User's own lectures achieved 100% application rate. The 1800+ engineers number is about a vendor collaboration the user coordinates, NOT the user's direct training audience.
+- **Country names:** User said "global Rocket locations" but did NOT list specific countries. Do not fabricate country lists.
 - **ICDL 2025:** Raunit IS 2nd author — strong position.
 - **Google Scholar:** Raunit claims to be listed but no public profile URL was found. Kept as commented-out placeholder in CV LaTeX.
 - **RL Regulation project:** Ongoing/confidential — descriptions kept general (MuJoCo, multiple policy algorithms, exploration-regulation dynamics).
 - **Code availability:** Most code is NDA'd or under active research grants. User may create 1-2 public repos but can't share most work.
 - **PiRat uses ROS2** (NOT ROS1 as might be assumed from older papers).
 - **Two resume versions:** 1-page industry resume focuses on high-impact bullets and keywords; multi-page CV expands everything for academic audiences.
-- **IBM internship:** Removed as a work experience section; Aspera test suite moved to Projects on industry resume. Full IBM section retained on CV.
-- **AI Classroom placement:** Listed under Research Consultant role (current) on industry resume; could fit under either Staff or Consultant role.
+- **IBM internship:** Removed as a work experience section on industry resume; Aspera test suite is a project there. Full IBM section retained on CV.
+- **AI Classroom placement:** Listed under Research Consultant role (current) on industry resume; could fit under either Staff or Consultant role per user.
+- **AI enablement numbers:** User's own lectures achieved 100% content application rate. The 1800+ engineers number is about a vendor collaboration program the user is coordinating, NOT the user's direct training audience. These must be described separately.
+- **Country names:** User said "global Rocket locations" — specific countries (US, India, UK, Czech Republic, China) were NOT provided by user and should not be listed.
 
 ---
 
