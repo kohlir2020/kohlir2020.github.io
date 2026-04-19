@@ -72,11 +72,11 @@ mechanisms is crucial for developing intelligent robotics that perform natural t
   <p class="subtitle">Robotics Using Bayesian Inference Lab | Chiba Lab</p>
   <details>
     <summary>This study investigates whether interaction with a mobile robot "PiRat" alters homebase dynamics compared with solo exploration and conspecific dyad exploration in rats.</summary>
-    <p>The experiment uses a custom-built software and mechanical stack consisting of a novel rat-sized robot (Raspberry Pi Zero running ROS, STM32 microcontroller, custom gimbal motor driver boards), an external Python/Kivy GUI implementing finite-state machine autonomous behaviors with convolution-kernel-based homebase detection, and a multi-threaded SLEAP-powered live pose estimation pipeline for real-time multi-agent tracking. I designed the autonomous behaviors with varying degrees of pro-social and anti-social actions as they pertain to respecting the real-time predicted homebase of rat actors in the arena. Our team is actively in the data collection stage.</p>
+    <p>The experiment uses a custom-built software and mechanical stack consisting of a novel rat-sized robot (Raspberry Pi Zero running ROS2, STM32 microcontroller, custom gimbal motor driver boards), an external Python/Kivy GUI implementing finite-state machine autonomous behaviors with convolution-kernel-based homebase detection, and a multi-threaded SLEAP-powered live pose estimation pipeline for real-time multi-agent tracking. I designed the autonomous behavioral routines — developed in simulation and transferred via sim-to-real pipeline to physical PiRat velocity commands — with varying degrees of pro-social and anti-social actions as they pertain to respecting the real-time predicted homebase of rat actors in the arena. Our team is actively in the data collection stage.</p>
   </details>
   <div class="tags">
     <span class="tag">Robotics</span>
-    <span class="tag">ROS</span>
+    <span class="tag">ROS2</span>
     <span class="tag">Pose Estimation</span>
     <span class="tag">SLEAP</span>
     <span class="tag">Python</span>
@@ -85,17 +85,16 @@ mechanisms is crucial for developing intelligent robotics that perform natural t
 <div class="item accent">
   <h3>Pirat RL Regulation Optimization</h3>
   <p class="subtitle">Robotics Using Bayesian Inference Lab | Chiba Lab</p>
-  <p>
-    [Summary to be added]
-  </p>
-  <ul>
-    <li>[Bullets to be added]</li>
-  </ul>
+  <details>
+    <summary>Developing a bio-influenced deep Reinforcement Learning regulation framework in MuJoCo simulation to model exploration-regulation dynamics in autonomous robotic behavior.</summary>
+    <p>This project investigates how biological regulation strategies — the way animals balance exploratory behavior with stress regulation — can be captured computationally and applied to robotic agents. Using multiple policy optimization algorithms in MuJoCo, the framework models how an autonomous robot should regulate its internal states while exploring uncertain environments, drawing directly from the explore-exploit behavioral data collected in the Chiba Lab's rat-robot interaction experiments.</p>
+  </details>
   <div class="tags">
-    <span class="tag">[Tags to be added]</span>
-  </div>
-  <div class="links">
-    <a href="#">[Links to be added]</a>
+    <span class="tag">Reinforcement Learning</span>
+    <span class="tag">MuJoCo</span>
+    <span class="tag">Policy Optimization</span>
+    <span class="tag">PyTorch</span>
+    <span class="tag">Sim-to-Real</span>
   </div>
 </div>
 <div class="item primary">

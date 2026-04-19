@@ -136,7 +136,7 @@ Searched for 2026 postings at companies aligned with Raunit's interests:
 ### AI Enablement & Teaching
 - Created entire AI foundations and enablement lecture series for NextGen program
   - **NextGen Academy:** https://www.rocketsoftware.com/en-us/nextgen-academy
-- Traveled to global Rocket locations (US, India, UK, Czech Republic, China) to deliver content
+- Delivered AI foundations lecture series at global Rocket offices, achieving 100% content application rate
 - 100% content application rate (every audience member applied tools/techniques to daily work)
 - Workshops solve real-world problems on existing Rocket engineering teams
 - Leading collaboration with 3rd party vendor for company-wide AI enablement (1800+ engineers)
@@ -148,7 +148,7 @@ Searched for 2026 postings at companies aligned with Raunit's interests:
 - Securely updates/creates/searches/summarizes Jira tickets based on user queries or Teams meeting content
 - Uses reasoning agent for intelligent Jira board organization
 - Exposed as MCP Server — can be hosted by other chatbots and IDEs
-- Selected for productionization and company-wide deployment
+- Project served as a foundation for AI-focused workflow optimizations and developer enablement trainings
 - Acted as basis for subsequent AI-focused optimizations and developer enablement trainings
 
 ### Other Rocket Details
@@ -220,7 +220,7 @@ From content.md's detailed tech stack description:
 ### AI Classroom Project
 - **Sponsor:** Human Education and Cognitive Development (HEDC)
 - Multi-million dollar project
-- Raunit was first engineer hired
+- Raunit was founding engineer hired
 - Built initial pilot system for multimodal live synced secure data streaming/recording in Pre-K classroom
 - Main point of contact for technical specifications
 - Architecture based on PTPv2 (Precision Time Protocol v2)
