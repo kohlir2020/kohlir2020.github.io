@@ -54,7 +54,7 @@ Searched for 2026 postings at companies aligned with Raunit's interests:
 - Looking for: production ML systems, real-world deployment experience
 
 **General patterns across all postings:**
-- PyTorch is universal; TensorFlow less common for robotics
+- PyTorch is universal for robotics/RL
 - C++ is highly valued (real-time constraints)
 - ROS/ROS2 is table stakes for robotics roles
 - Sim-to-real transfer is a hot keyword (MuJoCo, Isaac, Habitat)
@@ -218,7 +218,7 @@ From content.md's detailed tech stack description:
 - Designed for sim-to-real transfer to physical PiRat robot
 
 ### AI Classroom Project
-- **Sponsor:** Human Education and Cognitive Development (HEDC)
+- **Sponsor:** (user clarified: project has nothing to do with HEDC — removed from all docs)
 - Multi-million dollar project
 - Raunit was founding engineer hired
 - Built initial pilot system for multimodal live synced secure data streaming/recording in Pre-K classroom
@@ -292,7 +292,7 @@ See [Publications](#publications) section below.
 Python, C++, Ruby, Java, SQL, Bash
 
 ### Libraries & Frameworks
-PyTorch, TensorFlow, LangChain, DSPy, HuggingFace, MLflow, Pandas, NumPy, Scikit-learn, Kivy, OpenBCI
+PyTorch, DSPy, LangChain, HuggingFace, MLflow, Pandas, NumPy, Scikit-learn, Kivy, OpenBCI
 
 ### Domains
 Reinforcement Learning, Multi-Agent Systems, Agentic AI, NLP, Computer Vision, Sim-to-Real Transfer, Policy Optimization (PPO/SAC), Signal Processing, Pose Estimation, Neurorobotics, Embedded Systems

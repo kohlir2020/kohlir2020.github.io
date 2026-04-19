@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  19 APR 2026 14:28
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.3.1)  19 APR 2026 14:49
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -819,7 +819,8 @@ File: pgfmoduleparser.code.tex 2025-08-29 v3.1.11a (3.1.11a)
 \pgf@lib@svg@last@c@y=\dimen296
 \pgf@lib@svg@count=\count348
 \pgf@lib@svg@max@num=\count349
-)) (./rk_resume.aux)
+))
+No file rk_resume.aux.
 \openout1 = `rk_resume.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 161.
@@ -840,7 +841,6 @@ LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 161.
 LaTeX Font Info:    ... okay on input line 161.
 LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 161.
 LaTeX Font Info:    ... okay on input line 161.
-
 (/usr/local/texlive/2026basic/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count350
@@ -866,7 +866,6 @@ File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
 Package hyperref Info: Link coloring OFF on input line 161.
- (./rk_resume.out) (./rk_resume.out)
 \@outlinefile=\write4
 \openout4 = `rk_resume.out'.
 
@@ -899,14 +898,20 @@ L3 programming layer <2026-01-19>
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
-Package rerunfilecheck Info: File `rk_resume.out' has not changed.
-(rerunfilecheck)             Checksum: 5C378DD651AC277CAB08D496D56EB7B6;481.
+
+Package rerunfilecheck Warning: File `rk_resume.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `rk_resume.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  5C378DD651AC277CAB08D496D56EB7B6;481.
  ) 
 Here is how much of TeX's memory you used:
- 26724 strings out of 469006
- 509034 string characters out of 5454814
- 904735 words of memory out of 5000000
- 54997 multiletter control sequences out of 15000+600000
+ 26711 strings out of 469006
+ 508852 string characters out of 5454814
+ 904747 words of memory out of 5000000
+ 54990 multiletter control sequences out of 15000+600000
  635635 words of font info for 72 fonts, out of 8000000 for 9000
  319 hyphenation exceptions out of 8191
  84i,10n,104p,666b,469s stack positions out of 10000i,1000n,20000p,200000b,200000s
@@ -918,10 +923,10 @@ ype1/public/amsfonts/cm/cmcsc10.pfb></usr/local/texlive/2026basic/texmf-dist/fo
 nts/type1/public/amsfonts/cm/cmr10.pfb></usr/local/texlive/2026basic/texmf-dist
 /fonts/type1/public/amsfonts/cm/cmr9.pfb></usr/local/texlive/2026basic/texmf-di
 st/fonts/type1/public/amsfonts/cm/cmsy6.pfb>
-Output written on rk_resume.pdf (1 page, 102783 bytes).
+Output written on rk_resume.pdf (1 page, 102432 bytes).
 PDF statistics:
- 81 PDF objects out of 1000 (max. 8388607)
- 64 compressed objects within 1 object stream
+ 68 PDF objects out of 1000 (max. 8388607)
+ 51 compressed objects within 1 object stream
  6 named destinations out of 1000 (max. 500000)
- 45 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -220,6 +220,7 @@
 
 **Bullet 4 (AI Classroom, HEDC):** "First engineer hired for multi-million dollar HEDC-funded AI-powered Pre-K classroom project; architected PTPv2-synchronized multi-modal embedded data collection system with sub-second synchronization across all data streams."
 - **Source: AN (D9)** — "HEDC sponsored project, I was the first engineer hired... multi-million dollar project... novel architecture, based on PTPv2"
+- **⚠️ CORRECTION:** User clarified AI Classroom has nothing to do with HEDC. Removed "HEDC-funded" from all active documents.
 - **Verdict: ✅ Accurate**
 
 **Bullet 5 (Arduino/OpenBCI):** "Built custom Arduino firmware for OpenBCI Emotibit biophysical sensor integration; system integrates Lab Streaming Layer (LSL), Dante networking, Basler cameras, and Precision Time Protocol with on-prem quartz crystal grandmaster clock."
