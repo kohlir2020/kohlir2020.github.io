@@ -384,7 +384,7 @@ footer .footer-icons a:hover {
   nav ul {
     gap: 8px;
     flex-wrap: wrap;
-    justify-content: flex-start;
+    justify-content: center;
   }
   
   nav a {
@@ -404,6 +404,10 @@ footer .footer-icons a:hover {
   .photo-container {
     max-width: 100%;
   }
+  
+  .social-floating {
+    padding: 15px 30px;
+  }
 }
 
 /* Additional responsive breakpoint for very small screens */
@@ -419,6 +423,7 @@ footer .footer-icons a:hover {
   
   nav ul {
     gap: 5px;
+    justify-content: center;
   }
   
   nav a {
@@ -432,5 +437,9 @@ footer .footer-icons a:hover {
   
   .big-title {
     font-size: 2rem;
+  }
+  
+  .social-floating {
+    padding: 15px 35px;
   }
 }
