@@ -1,0 +1,297 @@
+%-------------------------
+% Academic CV in LaTeX
+% Based on rk_resume.tex template
+%------------------------
+
+\documentclass[letterpaper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[hidelinks]{hyperref}
+\usepackage[english]{babel}
+\usepackage{tabularx}
+\usepackage{setspace}
+\usepackage{enumitem}
+\usepackage{fontawesome5}
+\usepackage{multicol}
+\usepackage{graphicx}
+\setlength{\multicolsep}{-2.0pt}
+\setlength{\columnsep}{-1pt}
+\input{glyphtounicode}
+\usepackage{amsmath}
+
+\RequirePackage{tikz}
+\RequirePackage{xcolor}
+\RequirePackage{fontawesome}
+\usepackage{tikz}
+\usepackage{changepage}
+\usetikzlibrary{svg.path}
+
+
+\definecolor{cvblue}{HTML}{0E5484}
+\definecolor{black}{HTML}{130810}
+\definecolor{darkcolor}{HTML}{0F4539}
+\definecolor{cvgreen}{HTML}{3BD80D}
+\definecolor{taggreen}{HTML}{00E278}
+\definecolor{SlateGrey}{HTML}{2E2E2E}
+\definecolor{LightGrey}{HTML}{666666}
+\colorlet{name}{black}
+\colorlet{tagline}{darkcolor}
+\colorlet{heading}{darkcolor}
+\colorlet{headingrule}{cvblue}
+\colorlet{accent}{darkcolor}
+\colorlet{emphasis}{SlateGrey}
+\colorlet{body}{LightGrey}
+
+
+% Adjust margins -- slightly relaxed for multi-page CV
+\addtolength{\oddsidemargin}{-0.5in}
+\addtolength{\evensidemargin}{-0.5in}
+\addtolength{\textwidth}{1.0in}
+\addtolength{\topmargin}{-.5in}
+\addtolength{\textheight}{1.0in}
+
+\urlstyle{same}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-4pt}\scshape\raggedright\bfseries
+}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+
+% Ensure that generated pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \hspace{12pt}\text{#3} & \text{\small #4} \\
+      
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-9pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+
+\newcommand{\resumeItemListStart}{\begin{itemize}[itemsep=-1pt, parsep=2pt]}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+\newcommand{\resumeItem}[1]{\item\small{#1}}
+
+\newcommand\sbullet[1][.5]{\mathbin{\vcenter{\hbox{\scalebox{#1}{$\bullet$}}}}}
+
+%-------------------------------------------
+%%%%%%  CV STARTS HERE  %%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\begin{document}
+
+%----------HEADING----------
+
+\begin{center}
+    {\Huge \scshape Raunit Kohli} \\ \vspace{5pt}
+    {\large Machine Learning Engineer \& Robotics Researcher} \\ \vspace{5pt}
+    \small \href{https://www.raunitkohli.com/}{\raisebox{-0.1\height}\faGlobe\ \underline{raunitkohli.com}} ~ \href{https://github.com/kohlir2020}{\raisebox{-0.1\height}\faGithub\ \underline{kohlir2020}} ~ \href{tel:+1-7742629233}{\raisebox{-0.1\height}\faPhone\ \underline{774-262-9233}} ~ \href{mailto:raunitkohli@gmail.com}{\raisebox{-0.1\height}\faEnvelope\ \underline{raunitkohli@gmail.com}} ~ \href{https://linkedin.com/in/raunit-kohli/}{\raisebox{-0.1\height}\faLinkedinSquare\ \underline{raunit-kohli}} ~
+    % Uncomment below when Google Scholar profile is set up:
+    % \\ \vspace{3pt} \href{https://scholar.google.com/citations?user=YOUR_ID}{\raisebox{-0.1\height}\faGraduationCap\ \underline{Google Scholar}}
+    \vspace{-5pt}
+\end{center}
+
+%-----------EDUCATION-----------
+\section{EDUCATION}
+    \vspace{-2pt}
+        \begin{tabular*}{\dimexpr\textwidth\relax}{@{}l@{\extracolsep{\fill}}r@{}}
+        \textbf{University of California -- San Diego} & \textbf{\small 09/2020 -- 12/2023} \\[1pt]
+        Bachelor of Science, Machine Learning and Neural Computation & \small Major GPA: 3.91/4.0 \\
+        \end{tabular*}
+        \begin{tabular}{@{}l}
+        \small\textbf{Minor:} \small{Computer Science}; \textbf{Program of Concentration:} \small{Philosophy} \\[0.5pt]
+        \small\textbf{Awards:} \small{President \& Recruitment Advisor -- Phi Sigma Pi National Honor Fraternity; Provost Honors (Warren College)} \\
+        \end{tabular}
+\vspace{-12pt}
+
+%-----------PUBLICATIONS-----------
+\section{PUBLICATIONS}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+  \resumeItem{
+    % TODO: Replace [Authors] with full author list, bold your name
+    [Authors including \textbf{R. Kohli}]. ``Explore-Exploit Behaviors During Rat-Robot Interactions Optimize Social and Spatial Security.'' \textit{2025 IEEE International Conference on Development and Learning (ICDL)}, 2025. \href{https://ieeexplore.ieee.org/document/11204421}{\underline{[Paper]}}}\\[2pt]
+  \resumeItem{
+    [Authors including \textbf{R. Kohli}]. ``Interactive neurorobotics: Behavioral and neural dynamics of agent interactions.'' \textit{Frontiers in Psychology}, Sec. Cognitive Science, 2022. \href{https://doi.org/10.3389/fpsyg.2022.897603}{\underline{[Paper]}}}\\[2pt]
+  \resumeItem{
+    [Authors including \textbf{R. Kohli}]. ``Robotic Exploratory Control Via Subcortical Oscillations.'' \textit{11th International Brain-Computer Interface Meeting}, 2025 (Abstract). \href{https://openlib.tugraz.at/download.php?id=686289f5ddb80\&location=browse}{\underline{[Paper]}}}
+\resumeSubHeadingListEnd
+
+\vspace{-12pt}
+
+%-----------RESEARCH EXPERIENCE-----------
+\section{RESEARCH EXPERIENCE}
+  \resumeSubHeadingListStart
+
+      \vspace{-2pt}\item
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \textbf{Robotics Using Bayesian Inference Lab -- UC San Diego} & \textbf{\small San Diego, CA} \\
+         \hspace{12pt}\text{Machine Learning Research Consultant \href{https://raunitkohli.com/research}{\footnotesize{\underline{(Published)}}}} & \text{\small 09/2024 -- Present} \\
+      \end{tabular*}\vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Developed analysis pipeline and co-authored IEEE ICDL 2025 publication on explore-exploit dynamics during rat-robot social interactions, characterizing homebase-derived proxemic features for pro-social behavior.}
+        \resumeItem{Designing bio-influenced reinforcement learning regulation framework to optimize autonomous robot behavior through sim-to-real policy transfer across 2500+ multi-agent experimental trials.}
+        \resumeItem{Led technical engineering of network-synchronized multi-modal embedded system for AI-powered Pre-K classroom, integrating PTPv2 clock synchronization across networked cameras, neuromorphic sensors, and wearable physiological monitors.}
+        \resumeItem{System integrates custom firmware, Lab Streaming Layer (LSL), Dante networking, and Precision Time Protocol (PTPv2) with an on-prem quartz crystal grandmaster clock for sub-second synchronization across all data streams.}
+      \resumeItemListEnd 
+      \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+        \hspace{12pt}\text{Staff Machine Learning Research Engineer  \href{https://raunitkohli.com/research}{\footnotesize{\underline{(Published)}}}} & \text{\small 01/2021 -- 09/2024} \\
+      \end{tabular*}\vspace{-7pt}
+      \resumeItemListStart
+        \resumeItem{Implemented Reinforcement Learning algorithms in PyTorch for autonomous PiRat robot over ROS2, leveraging neural and positional data from 2500+ multi-agent experiments for real-world robotic behavior control.}
+        \resumeItem{Built real-time multi-agent pose estimation pipeline using SLEAP and developed convolution-kernel homebase detection algorithm for autonomous finite-state machine robot navigation.}
+        \resumeItem{Enhanced and scaled production-deployed Computer Vision-based live Pose-Estimation Software in C++ to validate statistical accuracy of Kinect Tracker, introducing new features and parameter logging, leading to 300\% processing speed improvement.}
+        \resumeItem{Developed signal processing applications for live and post analysis, leveraging advanced filtering techniques to enhance identification of stress-inducing behaviors from neural and physiological signals (HRV, PPG) of project subjects.}
+        \resumeItem{Translated and modeled numerical qualifications to interpretable results for publications by employing data visualization libraries across multiple analysis pipelines.}
+        \resumeItem{Scripted statistical pipelines and multi-tool workflows for cleaning, wrangling, and analyzing variable datasets across 2500+ experimental sessions.}
+      \resumeItemListEnd 
+
+    \resumeSubHeadingListEnd
+
+\vspace{-12pt}
+
+%-----------INDUSTRY EXPERIENCE-----------
+\section{INDUSTRY EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {Rocket Software} {Boston, MA} 
+      {Machine Learning Software Engineer III}{09/2024 -- Present}
+      \resumeItemListStart
+        \resumeItem{Architected production RAG citation engine leveraging multi-Gaussian clustering and dynamic content similarity, improving document reference relevance by 80\% across enterprise knowledge base.}
+        \resumeItem{Built LLM-powered SAS-to-Python code translation pipeline using LangChain ReAct agent for automated code analysis and Python architecture generation, accelerating legacy system modernization.}
+        \resumeItem{Developed few-shot NL-to-SQL retrieval agent with regex-based syntax validation, enabling natural language querying of enterprise databases for enhanced document retrieval and question answering.}
+        \resumeItem{Fine-tuned and evaluated transformer-based sentence embedding models with custom tokenizers, optimizing keyword-semantic similarity balance for production document reranking pipeline.}
+        \resumeItem{Deployed RESTful API endpoint for user query feedback in parallel collaboration with cross-functional teams against time-critical deadline, enabling immediate customer feedback for gold-standard dataset creation.}
+        \resumeItem{Utilized AWS CloudWatch and developed multi-purpose scripts to parse and analyze on-going trial logs, enabling proactive troubleshooting and creating consistently responsive data to customer requests.}
+      \resumeItemListEnd 
+
+    \resumeSubheading
+      {IBM (International Business Machines)} {San Jose, CA} 
+      {Automation and Testing Developer Intern}{06/2023 -- 09/2023}
+      \resumeItemListStart
+        \resumeItem{Scripted in Ruby to automate API endpoint testing for entire IBM Aspera on Cloud Workflows App designed to automate workflows of global content transfer and exchange across on-premises and multi-cloud environments.}
+        \resumeItem{Developed and documented comprehensive automated regression framework with 780+ API tests covering all endpoints.}
+        \resumeItem{Identified 15+ critical issues and bugs on live production server, communicated with developers to determine ideal expected behavior, and raised issues in project management tools to expertly report relevant failure details.}
+        \resumeItem{Executed full development cycle to outline and implement API Endpoint Test Controller for collaborative QA repository.}
+        \resumeItem{Contributed to global company-wide hackathon focused on emerging enterprise-ready watsonx AI platform.}
+      \resumeItemListEnd 
+
+    \resumeSubHeadingListEnd
+
+\vspace{-12pt}
+
+%-----------TEACHING EXPERIENCE-----------
+\section{TEACHING EXPERIENCE}
+  \resumeSubHeadingListStart
+
+    \resumeSubheading
+      {UC San Diego -- Cognitive Science Department} {San Diego, CA}
+      {Data Science Teaching Assistant (COGS 108)}{09/2022 -- 12/2023}
+      \resumeItemListStart
+        \resumeItem{Created weekly section presentations, podcasted to 800+ students, for content review and interactively guiding students at all coding-experience levels through programming assignments by demonstrating live debugging and problem-solving.}
+        \resumeItem{Formulated weekly exams, held tutoring sessions, scripted automated grading pipelines to optimize multi-LMS system.}
+        \resumeItem{Instructed on systematically leveraging Exploratory Data Analysis techniques to answer complex data-focused questions.}
+      \resumeItemListEnd 
+
+    \resumeSubheading
+      {Rocket Software} {Boston, MA}
+      {AI Enablement Lecture Series Creator}{2024 -- 2025}
+      \resumeItemListStart
+        \resumeItem{Created week-long lecture series and corresponding interactive educational material for both company internship program and company-wide audience, providing a general overview of GenAI and how to use AI to optimize workflows.}
+        \resumeItem{Delivered lecture series focusing on understanding LLMs at a conceptual level and mastering techniques such as prompt engineering, model tuning, workflow building, and AI-assisted coding.}
+      \resumeItemListEnd
+
+    \resumeSubheading
+      {Groves High School (GHS)} {}
+      {VEX Robotics Competition Coach}{}
+      \resumeItemListStart
+        \resumeItem{Mentoring competitive VEX Robotics team in autonomous path planning algorithms including PID control, cubic spline trajectory generation, odometry-based localization, and sensor fusion.}
+        \resumeItem{Designing curriculum covering control theory fundamentals, sensor integration, and autonomous navigation directly mapping to ROS-based robotic control architectures.}
+      \resumeItemListEnd
+
+    \resumeSubHeadingListEnd
+
+\vspace{-12pt}
+
+%-------------PROJECTS------------------
+\section{HIGHLIGHTED PROJECTS}
+\vspace{-2pt}
+\resumeSubHeadingListStart
+  \resumeItem{
+    \textbf{VLM-Guided Hierarchical RL in Habitat-Lab} (WPI, 2024) -- Hierarchical PPO/SAC for Fetch robot with VLM high-level planner for autonomous navigation and manipulation from language instructions; \href{https://www.raunitkohli.com/research}{\underline{details}}.}\\[-2pt]
+  \resumeItem{
+    \textbf{Smart Scrum Master -- Rocket.Build 2025 ``Most Innovative'' Winner} -- LLM-powered Agile assistant and MCP Server optimizing Jira workflows via reasoning agent, winning 1 of 6 awards from 650+ global projects; \href{https://www.raunitkohli.com/work}{\underline{details}}.}\\[-2pt]
+  \resumeItem{
+    \textbf{MultiValue Experience Unit Test Coverage} (Rocket Software, 2022) -- Launched foundational unit test framework integrating OOP mocking and line coverage, achieving 30\% line coverage (3x the initial OKR goal) and identifying multiple redundant dependencies.}
+\resumeSubHeadingListEnd
+
+\vspace{-12pt}
+
+%-----------TECHNICAL SKILLS-----------
+\section{TECHNICAL SKILLS}
+\vspace{-2pt}
+    \begin{itemize}[leftmargin=0in, label={}]
+    \item
+    \small \textbf{Languages:}{ Python, C++, Ruby, Java, SQL, Bash} \\[2pt]
+    \small \textbf{Libraries \& Frameworks:}{ PyTorch, TensorFlow, LangChain, HuggingFace, Pandas, NumPy, Scikit-learn, Kivy} \\[2pt]
+    \small \textbf{Domains:}{ Reinforcement Learning, Multi-Agent Systems, Agentic AI, Natural Language Processing, Computer Vision, Sim-to-Real Transfer, Policy Optimization (PPO/SAC), Signal Processing, Pose Estimation, Neurorobotics, Embedded Systems} \\[2pt]
+    \small \textbf{Tools \& Platforms:}{ ROS2, SLEAP, Habitat-Lab, AWS (CloudWatch), Kubernetes, Git/GitHub, Atlassian Suite (Jira, Confluence), PTPv2, Lab Streaming Layer (LSL)} \\
+    \end{itemize}
+\vspace{-10pt}
+
+%-----------RELEVANT COURSEWORK-----------
+\section{RELEVANT COURSEWORK}
+\vspace{-2pt}
+    \begin{itemize}[leftmargin=0in, label={}]
+    \item
+    \small{Deep Learning for NLP $\sbullet$ Neural Networks $\sbullet$ Data Modeling $\sbullet$ Advanced Topics in LLMs $\sbullet$ Supervised \& Unsupervised Machine Learning $\sbullet$ Data Structures \& Algorithms $\sbullet$ Markov Decision Processes $\sbullet$ Reinforcement Learning (WPI)} \\
+    \end{itemize}
+\vspace{-10pt}
+
+%-----------LEADERSHIP & SERVICE-----------
+\section{LEADERSHIP \& SERVICE}
+\vspace{-2pt}
+    \begin{itemize}[leftmargin=0in, label={}]
+    \item
+    \small{\textbf{Phi Sigma Pi National Honor Fraternity} -- President \& Recruitment Advisor, Zeta Alpha Chapter (UCSD). Represented chapter at 2022 National Convention in Washington, DC.} \\[2pt]
+    \small{\textbf{Provost Honors} -- Warren College, UC San Diego.} \\
+    \end{itemize}
+
+\end{document}
