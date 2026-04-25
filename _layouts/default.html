@@ -6,6 +6,9 @@
     <title>{% if page.title %}{{ page.title }} — {{ site.brand }}{% else %}{{ site.title }}{% endif %}</title>
     <!-- SEO meta via plugin (uses site.title/description/url/author/social) -->
     {% seo %}
+    <!-- Anti-AI/scraping meta tags -->
+    <meta name="robots" content="noai, noimageai, noarchive">
+    <meta name="googlebot" content="noai, noimageai">
     <!-- Fonts & CSS -->
     <link rel="stylesheet" href="/style.css" />
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
@@ -15,5 +18,23 @@
     {% include header.html %}
     <main>{{ content }}</main>
     {% include footer.html %}
+    <!-- Anti-scraping: detect headless browsers and rapid automated access -->
+    <script>
+      (function () {
+        // Detect headless/automated browsers
+        var dominated =
+          navigator.webdriver ||
+          window.__nightmare ||
+          window.callPhantom ||
+          window._phantom ||
+          window.__selenium_unwrapped ||
+          window.__webdriver_evaluate ||
+          window.__driver_evaluate;
+        if (dominated) {
+          document.body.innerHTML =
+            '<p style="text-align:center;margin-top:4rem;">Automated access is not permitted.</p>';
+        }
+      })();
+    </script>
   </body>
 </html>
