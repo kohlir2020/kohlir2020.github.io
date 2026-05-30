@@ -34,6 +34,22 @@ permalink: pretty
 plugins:
   - jekyll-seo-tag
   - jekyll-sitemap
+  - jekyll-redirect-from
+
+# Exclude non-page files from Jekyll processing
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - vendor
+  - _config_local.yml
+  - assets/linkedin_draft.md
+  - assets/reference_notes.md
+  - assets/old/content_old.md
+  - assets/old/content_provenance_old.md
+  - assets/old/Assorted_notes_old
+  - assets/rk_resume.tex
+  - assets/rk_cv.tex
 
 defaults:
   - scope: { path: "" }

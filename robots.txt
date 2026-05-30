@@ -48,6 +48,9 @@ Disallow: /
 User-agent: PerplexityBot
 Disallow: /
 
+# Sitemap location
+Sitemap: https://www.raunitkohli.com/sitemap.xml
+
 User-agent: YouBot
 Disallow: /
 
