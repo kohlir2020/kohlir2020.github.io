@@ -1,15 +1,22 @@
 # robots.txt — raunitkohli.com
 # Allow legitimate search engines, block AI crawlers and scrapers
 
-# Default: allow search engine indexing
+# Default: allow search engine indexing, but block direct PDF crawling
+# (resume/CV are surfaced through the styled /resume/ page instead)
 User-agent: Googlebot
 Allow: /
+Disallow: /assets/rk_resume.pdf
+Disallow: /assets/rk_cv.pdf
 
 User-agent: Bingbot
 Allow: /
+Disallow: /assets/rk_resume.pdf
+Disallow: /assets/rk_cv.pdf
 
 User-agent: DuckDuckBot
 Allow: /
+Disallow: /assets/rk_resume.pdf
+Disallow: /assets/rk_cv.pdf
 
 # Block AI training crawlers
 User-agent: GPTBot
@@ -47,9 +54,6 @@ Disallow: /
 
 User-agent: PerplexityBot
 Disallow: /
-
-# Sitemap location
-Sitemap: https://www.raunitkohli.com/sitemap.xml
 
 User-agent: YouBot
 Disallow: /
