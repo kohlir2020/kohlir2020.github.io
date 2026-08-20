@@ -18,8 +18,6 @@
 \usepackage[english]{babel}
 \usepackage{tabularx}
 \usepackage{setspace}
-\usepackage{enumitem}
-\usepackage{fontawesome5}
 \usepackage{multicol}
 \usepackage{graphicx}
 \setlength{\multicolsep}{-2.0pt}
@@ -30,7 +28,6 @@
 \RequirePackage{tikz}
 \RequirePackage{xcolor}
 \RequirePackage{fontawesome}
-\usepackage{tikz}
 \usepackage{changepage}
 \usetikzlibrary{svg.path}
 
@@ -86,7 +83,7 @@
 % Sections formatting
 \titleformat{\section}{
   \vspace{-4pt}\scshape\raggedright\bfseries
-}{}{0em}{}[\color{black}\titlerule \vspace{-5pt}]
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
 \pdfgentounicode=1
@@ -176,11 +173,13 @@
       {Rocket Software} {Boston, MA} 
       {Machine Learning Software Engineer III}{09/2024 -- Present}
       \resumeItemListStart
-        \resumeItem{Owns core features of \href{https://www.rocketsoftware.com/en-us/products/eva}{\underline{Rocket EVA™}} AI platform: sanitized RESTful API, end-to-end authorization, streaming telemetry, async MCP tool execution engine, multi-database Docker deployment, and live SMF record analysis tooling.}
-        \resumeItem{Creates and delivers AI foundations workshops for company apprenticeship program at global offices (65+ graduates), achieving 100\% content adoption; leading coordination of enterprise-wide AI enablement program for 1800+ engineers.}
-        \resumeItem{Built SAS-to-Python code translation tool on specialized team using DSPy ReAct agent, collaborating on Agentic Context Engineering (ACE) optimization framework; created multi-agent workflows for architecture design, test generation, and automated code execution refinement with MLflow evaluation.}
-        \resumeItem{Designed and implemented novel Large Language Model Citation Generator for \href{https://www.rocketsoftware.com/sites/default/files/resource_files/smart-chat-brochure.pdf}{\underline{SmartChat™}} using multi-Gaussian clustering algorithms and dynamic content similarity techniques, yielding 80\% more relevant document references.}
-        \resumeItem{Developed few-shot LLM prompting framework to translate natural language queries into executable SQL, integrating multi-step sub-agent workflows and regex-based syntax validation, enhancing table-based document retrieval and QA.}
+        \resumeItem{Architect end-to-end Identity and Access Management (IAM) for \href{https://www.rocketsoftware.com/en-us/products/eva}{\underline{Rocket EVA™}} — ship ground-up OIDC-based authentication, cross-language runtime executable for real-time customer license validation, MCP management layer authorization and registration UI, and cross-team integration with mainframe-scoped RBAC model in one quarter.}
+        \resumeItem{Author customer-facing technical documentation and train sales engineers to independently configure and demo the platform for prospective clients, cutting non-technical installation-and-demo time from 3 days to 2 hours.}
+        \resumeItem{Deploy secure live customer cloud environments on AWS (EC2, Cognito) using Terraform, analyze error logs to resolve user and QA reported product-behavior questions, and ship features and bug fixes directly against pilot feedback.}
+        \resumeItem{Create and deliver AI foundations workshops for company apprenticeship program at global offices, training 95+ graduates to apply techniques daily; lead coordination of enterprise-wide AI enablement program for 1800+ engineers.}
+        \resumeItem{Build SAS-to-Python code translation tool on specialized team using DSPy ReAct agent, collaborating on Agentic Context Engineering (ACE) optimization framework; chains 3 per-input agentic workflows for architecture design, test generation, and MLflow tracked loop that runs tests and repairs attempted generation against reported failures.}
+        \resumeItem{Design and implement retrieval-based grounding and citation generation for enterprise RAG assistant, using Gaussian Mixture Model to dynamically rerank cross-encoder and BM25 similarity scores, yielding 80\% more relevant references.}
+        \resumeItem{Develop few-shot prompt-engineering framework to translate natural language queries into executable SQL, integrating multi-step sub-agent workflows and regex-based syntax validation, enhancing table-based document retrieval and QA.}
       \resumeItemListEnd 
 
       \vspace{-2pt}\item
@@ -189,18 +188,18 @@
          \hspace{12pt}\text{Machine Learning Research Consultant \href{https://raunitkohli.com/research}{\footnotesize{\underline{(Published)}}}} & \text{\small 09/2024 -- Present} \\
       \end{tabular*}\vspace{-7pt}
       \resumeItemListStart
-        \resumeItem{Architected composable spatial and neural signal analysis pipeline and presented IEEE ICDL 2025 publication on explore- exploit dynamics in rat-robot social interactions, characterizing homebase-derived proxemic features for social behavior.}
-        \resumeItem{Developing bio-influenced deep RL regulation framework in MuJoCo simulation using multiple policy optimization algorithms to model exploration-regulation dynamics in autonomous robotic behavior.}
-        \resumeItem{Founding engineer hired for multi-million dollar AI-powered classroom project; built PTPv2-synchronized multi-modal embedded system for secure data streaming and recording with custom Arduino firmware for OpenBCI biophysical sensors and high-precision Basler camera integration.}
+        \resumeItem{Architect composable data pipeline for cleaning kinematic agent-interaction data and training models to identify proxemic predictors of hand-labeled pro-social behavior; present explore-exploit dynamics findings at IEEE ICDL 2025.}
+        \resumeItem{Shape reward functions for deep RL policy-optimization algorithms using importance-ranked homebase-derived proxemic features, modeling bio-influenced exploration-regulation dynamics for robotic behavior in MuJoCo simulation.}
+        \resumeItem{Founding engineer hired for multi-million-dollar AI-powered classroom project; built PTPv2-synchronized multi-modal embedded system for secure data streaming and recording with custom Arduino firmware for OpenBCI biophysical sensors and high-precision Basler camera integration.}
       \resumeItemListEnd 
       \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
         \hspace{12pt}\text{Staff Machine Learning Research Engineer  \href{https://raunitkohli.com/research}{\footnotesize{\underline{(Published)}}}} & \text{\small 01/2021 -- 09/2024} \\
       \end{tabular*}\vspace{-7pt}
       \resumeItemListStart
-        \resumeItem{Spearheaded implementation of Reinforcement Learning algorithms in PyTorch for robotic PiRat over ROS2 with sim-to-real transfer of autonomous behavioral routines to physical robot velocity commands, utilizing extensive neural and positional data from 2500+ rat experiments to mimic and predict multi-agent interactions.}
+        \resumeItem{Spearheaded implementation of reinforcement learning algorithms in PyTorch for robotic PiRat over ROS2 with sim-to-real transfer of autonomous behavioral routines to physical robot velocity commands, utilizing extensive neural and positional data from 2500+ rat experiments to mimic and predict multi-agent interactions.}
         \resumeItem{Developed live multi-agent pose estimation system using SLEAP neural networks with multi-threaded architecture.}
-        \resumeItem{Enhanced and scaled production-deployed Computer Vision-based live Pose-Estimation Software in C++ to validate statistical accuracy of Kinect Tracker, introducing new features and parameter logging, yielding 3x processing speed.}
-        \resumeItem{Developed signal processing applications for live and post analysis, leveraging advanced filtering techniques to enhance identification of stress-inducing behaviors from neural and physiological signals (HRV, PPG) of project subjects.}
+        \resumeItem{Enhanced and scaled production-deployed computer vision-based live pose-estimation Software in C++ to validate statistical accuracy of Kinect Tracker, introducing new features and parameter logging, yielding 3x processing speed.}
+        %\resumeItem{Developed signal processing applications for live and post analysis, leveraging advanced filtering techniques to enhance identification of stress-inducing behaviors from neural and physiological signals (HRV, PPG) of project subjects.}
       \resumeItemListEnd 
 
     \resumeSubHeadingListEnd
@@ -212,13 +211,16 @@
 \vspace{-2pt}
 \resumeSubHeadingListStart
   \resumeItem{
-    \textbf{VLM-Guided Hierarchical RL in Habitat-Lab} (WPI, 2025) -- Hierarchical PPO/SAC for Meta Research's Fetch robot with VLM high-level planner for autonomous navigation and manipulation from language instructions.}\\[-2pt]
+    \textbf{VLM-Guided Hierarchical RL in robot simulation} (WPI, 2025) -- Hierarchical PPO/SAC for Fetch robot in Meta Research's Habitat-Lab with VLM high-level planner for autonomous navigation and manipulation from language instructions.}
+\vspace{-6pt}
   \resumeItem{
-    \textbf{Smart Scrum Master -- Rocket.Build 2025 "Most Innovative" Winner} -- LLM-powered Agile assistant and MCP Server optimizing Jira workflows via reasoning agent, winning 1 of 6 awards from 650+ global company projects.}\\[-2pt]
+    \textbf{Smart Scrum Master -- Rocket.Build 2025 ``Most Innovative'' Winner} -- LLM-powered Agile assistant and MCP Server optimizing Jira workflows via reasoning agent, winning 1 of 6 awards from 650+ global company projects.}
+\vspace{-6pt}
   \resumeItem{
-    \textbf{Aspera Workflows Automated Test Suite} (IBM Engineering Intern, 2023) -- Built complete 780+ test automated regression framework in Ruby for IBM Aspera on Cloud API, identifying 15+ critical production bugs across all endpoints.}\\[-2pt]
-  \resumeItem{
-    \textbf{VEX Robotics Autonomous Systems Coach} (Grafton High School, MA) -- Mentoring competitive robotics team in autonomous path planning: PID control, spline trajectory generation, odometry-based localization, and sensor fusion.}
+    \textbf{Aspera Workflows Automated Test Suite} (IBM Engineering Intern, 2023) -- Built complete 780+ test automated regression framework in Ruby for IBM Aspera on Cloud API, identifying 15+ critical production bugs across all endpoints.}
+% \vspace{-8pt}
+%  \resumeItem{
+%    \textbf{VEX Robotics Autonomous Systems Coach} (Grafton High School, MA) -- Mentoring competitive robotics team in autonomous path planning: PID control, spline trajectory generation, odometry-based localization, and sensor fusion.}
 \resumeSubHeadingListEnd
 
 \vspace{-16pt}
@@ -226,7 +228,7 @@
 \vspace{-2pt}
     \begin{itemize}[leftmargin=0in, label={}]
     \item
-    \small \textbf{Languages:}{ Python, C++, Ruby, Java, SQL, Bash;} \textbf{Libraries:}{ PyTorch, DSPy, LangChain, HuggingFace, CUDA, OpenCV} \\[1pt]
+    \small \textbf{Languages:}{ Python, C++, Ruby, Java, SQL, Bash;} \textbf{Libraries:}{ PyTorch, DSPy, MLflow, HuggingFace, OpenCV} \\[1pt]
     \small \textbf{Domains:}{ Policy-Optimization Algorithms, Multi-Agent Systems, Agentic AI, Natural Language Processing, Computer Vision, Markov Decision Processes, Signal Processing, Pose Estimation, Data Analysis (Pandas/NumPy/Scikit-learn)} \\[1pt]
     \small \textbf{Tools:}{ AWS, Docker, Kubernetes, Postgres, Kafka, ROS2, MuJoCo, Git/GitHub, Atlassian (Jira, Confluence, Bitbucket)} \\
     \end{itemize}
