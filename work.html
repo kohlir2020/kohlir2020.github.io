@@ -14,9 +14,9 @@ title: "Industry"
   <ul>
     <li>Owns core features of <a href="https://www.rocketsoftware.com/en-us/products/eva">Rocket EVA™</a>, the company's flagship AI platform: sanitized RESTful API, end-to-end OIDC authorization, streaming telemetry, async MCP tool execution engine, and structured Docker deployment for company-wide release.</li>
     <li>Leading core integration between EVA™ and Rocket Data Gateway (RDG) for Mainframe SMF Record Streaming and Querying, enabling customers to query both high-level and granular artifacts of Mainframe job and system performance.</li>
-    <li>Architect end-to-end Identity and Access Management (IAM) for Rocket EVA™ — OIDC-based authentication, MCP management layer authorization, and secure cross-team integration with a novel mainframe-scoped RBAC model.</li>
-    <li>Author customer-facing technical documentation and train Sales Engineers to independently configure and demo the platform for prospective clients, cutting non-technical installation-and-demo time from ~2 days to ~1 hour.</li>
-    <li>Deploy the platform into secure customer environments (AWS) for live paid pilots; analyze usage and error logs to resolve user-reported product-behavior questions and ship features and bug fixes directly against POC feedback.</li>
+    <li>Architect end-to-end Identity and Access Management (IAM) for Rocket EVA™ — ship ground-up OIDC-based authentication, a cross-language runtime executable for real-time customer license validation, MCP management layer authorization and registration UI, and cross-team integration with a mainframe-scoped RBAC model in one quarter.</li>
+    <li>Author customer-facing technical documentation and train Sales Engineers to independently configure and demo the platform for prospective clients, cutting non-technical installation-and-demo time from 3 days to 2 hours.</li>
+    <li>Deploy secure live customer cloud environments on AWS (EC2, Cognito) using Terraform; analyze error logs to resolve user- and QA-reported product-behavior questions and ship features and bug fixes directly against pilot feedback.</li>
   </ul>
   <div class="tags">
     <span class="tag">AI Platform</span>
@@ -33,7 +33,7 @@ title: "Industry"
   <h3>Upskilling the Workplace with AI Skills</h3>
   <p class="subtitle">Rocket Software (2025 - Present)</p>
   <ul>
-    <li>Create and deliver AI foundations lecture series for company apprenticeship program and engineering teams at global Rocket offices, achieving 100% content application rate from workshop audiences.</li>
+    <li>Create and deliver AI foundations lecture series for company apprenticeship program and engineering teams at global Rocket offices, training 95+ graduates to apply techniques daily.</li>
     <li>Lecture series covers GenAI foundations, understanding LLMs at a conceptual level, prompt engineering, model tuning, workflow building, and AI-assisted coding.</li>
     <li>Developed and led coordination of enterprise-wide AI enablement program reaching 1800+ engineers. Organized multi-tiered training series between elected internal AI Champions, organizing content and meeting logistics across 3 BUs, 45+ product teams, 3 coding languages, and 10 timezones.</li>
   </ul>
@@ -49,7 +49,7 @@ title: "Industry"
   <h3>SQL Retrieval Agent</h3>
   <p class="subtitle">Rocket Software (2025)</p>
   <p>
-    Develop proof-of-concept few-shot LLM prompting framework to translate natural language queries into executable SQL, integrating regex-based syntax validation, enhancing table-based document retrieval and question answering.
+    Develop proof-of-concept few-shot LLM prompting framework to translate natural language queries into executable SQL, integrating multi-step sub-agent workflows and regex-based syntax validation, enhancing table-based document retrieval and question answering.
   </p>
   <div class="tags">
     <span class="tag">LLM</span>
@@ -99,13 +99,22 @@ title: "Industry"
   <h3>RAG Citation Generator for SmartChat™</h3>
   <p class="subtitle">Rocket Software (2024)</p>
   <p>
-    Designed and implemented novel Large Language Model Citation Generator for <a href="https://www.rocketsoftware.com/sites/default/files/resource_files/smart-chat-brochure.pdf">SmartChat™</a> using multi-Gaussian clustering algorithms and dynamic content similarity techniques, yielding 80% more relevant document references for production-grade RAG model.
+    Designed and implemented a novel retrieval-based grounding and citation generation system for <a href="https://www.rocketsoftware.com/sites/default/files/resource_files/smart-chat-brochure.pdf">SmartChat™</a>, a production RAG assistant, using a Gaussian Mixture Model to dynamically rerank cross-encoder and BM25 similarity scores, yielding 80% more relevant document references.
   </p>
+  <ul>
+    <li>Hybrid retrieval (BM25 keyword search + semantic search) surfaces many candidate documents per query, but not all retrieved documents actually ground the LLM's answer; solved for selecting the correct per-query citation subset without a fixed top-k cutoff.</li>
+    <li>Built the production relevance signal by embedding the generated answer and each candidate document with a bi-encoder and scoring citation relevance via cosine similarity, experimenting with a lightweight local sentence-embedding model as an alternative to the system's default embedder.</li>
+    <li>Added a keyword-similarity signal to counterbalance cases where semantic-only scoring could unfairly penalize documents that were surfaced primarily through keyword/BM25 matching, and evaluated a cross-encoder reranker and a custom natural-language-inference entailment score as additional ensemble candidates before settling on the simpler, better-performing bi-encoder cosine-similarity score for production.</li>
+    <li>Designed an unsupervised cutoff algorithm that fits 1- vs. 2-component Gaussian Mixture Models to each query's similarity-score distribution, using BIC/AIC to detect whether scores are naturally bimodal (relevant vs. irrelevant) or unimodal; falls back to an inflection-point/elbow heuristic when unimodal, and otherwise assigns the higher-mean cluster as "relevant" and validates the split with a silhouette-score quality gate.</li>
+    <li>Engineered separate handling so non-embeddable content (tables, SQL, images, metadata-only documents) bypasses similarity scoring and is always cited, added deduplication for multi-hop citations, and built structured logging to support offline, dataset-driven evaluation.</li>
+  </ul>
   <div class="tags">
     <span class="tag">LLM</span>
     <span class="tag">RAG</span>
-    <span class="tag">Machine Learning</span>
-    <span class="tag">Clustering</span>
+    <span class="tag">Gaussian Mixture Models</span>
+    <span class="tag">BM25</span>
+    <span class="tag">Bi-Encoder</span>
+    <span class="tag">Cross-Encoder</span>
     <span class="tag">NLP</span>
   </div>
 </div>
